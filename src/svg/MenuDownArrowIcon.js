@@ -3,12 +3,13 @@ const MenuDownArrowIcon = ({ width, height, color }) => {
 		<svg
 			xmlns='http://www.w3.org/2000/svg'
 			class='icon icon-tabler icon-tabler-caret-down'
-			width='44'
-			height='44'
+			width={width}
+			height={height}
 			viewBox='0 0 24 24'
 			stroke-width='1.5'
 			stroke='#2c3e50'
 			fill='none'
+			color={color}
 			stroke-linecap='round'
 			stroke-linejoin='round'
 		>
