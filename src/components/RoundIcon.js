@@ -1,6 +1,6 @@
 import React from 'react';
 
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 const RoundIconDiv = styled.div`
 	padding: 5px;
@@ -9,14 +9,24 @@ const RoundIconDiv = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: center;
+
+	${({ onHoverStyle }) =>
+		onHoverStyle &&
+		css`
+			&:hover {
+				cursor: pointer;
+			}
+		`}
 `;
 
 const RoundIcon = (props) => {
-	const { children } = props;
+	const { children, onClick, onHoverStyle } = props;
 
 	return (
 		<>
-			<RoundIconDiv>{children}</RoundIconDiv>
+			<RoundIconDiv onHoverStyle={onHoverStyle} onClick={onClick}>
+				{children}
+			</RoundIconDiv>
 		</>
 	);
 };

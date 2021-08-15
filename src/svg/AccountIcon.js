@@ -1,4 +1,4 @@
-const AccountIcon = ({ width, height, color }) => {
+const AccountIcon = ({ width, height, color, marginRight }) => {
 	return (
 		<svg
 			xmlns='http://www.w3.org/2000/svg'
@@ -12,6 +12,7 @@ const AccountIcon = ({ width, height, color }) => {
 			color={color}
 			stroke-linecap='round'
 			stroke-linejoin='round'
+			style={{ marginRight: `${marginRight}` }}
 		>
 			<path stroke='none' d='M0 0h24v24H0z' fill='none' />
 			<circle cx='12' cy='7' r='4' />
