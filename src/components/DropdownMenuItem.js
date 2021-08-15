@@ -4,9 +4,15 @@ import styled from 'styled-components';
 
 const DropdownMenuItemParent = styled.div`
 	display: flex;
+	margin: 5px 0;
 	align-items: center;
 	justify-content: flex-start;
-	margin: 5px 0;
+
+	a {
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+	}
 
 	&:hover {
 		cursor: pointer;

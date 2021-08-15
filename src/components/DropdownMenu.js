@@ -48,13 +48,15 @@ const DropdownMenu = () => {
 		<>
 			<DropdownMenuParent>
 				<DropdownMenuItem>
-					<AccountIcon
-						color='#000'
-						width='25px'
-						height='25px'
-						marginRight='10px'
-					/>
-					<Link to='/update-profile'>Update Profile</Link>
+					<Link to='/update-profile'>
+						<AccountIcon
+							color='#000'
+							width='25px'
+							height='25px'
+							marginRight='10px'
+						/>
+						<p>Update Profile</p>
+					</Link>
 				</DropdownMenuItem>
 				<DropdownMenuItem onClick={handleSignout}>
 					<LogoutIcon

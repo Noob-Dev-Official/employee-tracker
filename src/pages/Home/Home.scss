@@ -1,7 +1,25 @@
-.home {
-	height: 100vh;
+.tools-section {
+	margin-top: 40px;
 
-	.title {
-		padding-top: 80px;
+	h3 {
+		color: #0f4c75;
+	}
+
+	.buttons {
+		margin-top: 15px;
+		display: flex;
+
+		a {
+			color: #1b262c;
+			text-decoration: none;
+		}
+	}
+}
+
+.projects-section {
+	margin-top: 60px;
+
+	h3 {
+		color: #0f4c75;
 	}
 }
