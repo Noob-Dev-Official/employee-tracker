@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
-
+// eslint-disable-next-line
 import Alert from '../../components/Alert';
 import { useAuth } from '../../contexts/AuthContext';
 import Layout from '../../components/Layout';
@@ -11,10 +11,13 @@ import SettingsIcon from '../../svg/SettingsIcon';
 import './Home.scss';
 
 const Home = () => {
+	// eslint-disable-next-line
 	const [error, setError] = useState(false);
+	// eslint-disable-next-line
 	const [errorMssg, setErrorMssg] = useState('');
+	// eslint-disable-next-line
 	const history = useHistory();
-
+	// eslint-disable-next-line
 	const { currentUser, signout } = useAuth();
 
 	return (

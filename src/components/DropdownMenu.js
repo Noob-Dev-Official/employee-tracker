@@ -26,6 +26,7 @@ const DropdownMenuParent = styled.div`
 `;
 
 const DropdownMenu = () => {
+	// eslint-disable-next-line
 	const { currentUser, signout } = useAuth();
 
 	const history = useHistory();
