@@ -7,6 +7,7 @@ import { AuthProvider } from './contexts/AuthContext';
 import PrivateRoute from './components/PrivateRoute';
 import ForgotPassword from './pages/ForgotPassword';
 import UpdateProfile from './pages/UpdateProfile';
+import ManageEmployees from './pages/ManageEmployees/ManageEmployees';
 
 import './App.scss';
 
@@ -23,6 +24,11 @@ function App() {
 									exact
 									path='/update-profile'
 									component={UpdateProfile}
+								/>
+								<PrivateRoute
+									exact
+									path='/manage-employees'
+									component={ManageEmployees}
 								/>
 								<Route exact path='/sign-in'>
 									<SignIn />
