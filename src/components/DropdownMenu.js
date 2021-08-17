@@ -22,6 +22,10 @@ const DropdownMenuParent = styled.div`
 	a {
 		color: #1b262c;
 		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+		}
 	}
 `;
 
