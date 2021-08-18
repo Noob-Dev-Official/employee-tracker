@@ -16,8 +16,8 @@ const ManageEmployees = () => {
 				</div>
 				<div className='employee-table'>
 					<div className='table-heading'>
-						<h4>No.</h4>
-						<h4>Employee Name</h4>
+						<h4 className='number-col'>No.</h4>
+						<h4 className='employee-name-col'>Employee Name</h4>
 					</div>
 				</div>
 			</Layout>

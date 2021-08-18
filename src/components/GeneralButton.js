@@ -24,7 +24,7 @@ const GeneralButton = (props) => {
 	return (
 		<>
 			<GeneralButtonParent>
-				<button>{text}</button>
+				<button onClick={onClick}>{text}</button>
 			</GeneralButtonParent>
 		</>
 	);
