@@ -62,7 +62,81 @@ const Home = () => {
 					</div>
 				</section>
 				<section className='projects-section'>
-					<h3>Projects</h3>
+					<h3 className='title'>Projects</h3>
+					<div className='projects'>
+						<HomeButton isSmallMode={false}>
+							<Link>
+								<h4 className='project-name'>123 Bryan Ave</h4>
+								<p className='num-of-employees'>Emp No: 16 employees</p>
+								<p className='description'>
+									Description: Lorem Ispum Donor
+								</p>
+							</Link>
+						</HomeButton>
+						<HomeButton isSmallMode={false}>
+							<Link>
+								<h4 className='project-name'>123 Bryan Ave</h4>
+								<p className='num-of-employees'>Emp No: 16 employees</p>
+								<p className='description'>
+									Description: Lorem Ispum Donor
+								</p>
+							</Link>
+						</HomeButton>
+						<HomeButton isSmallMode={false}>
+							<Link>
+								<h4 className='project-name'>123 Bryan Ave</h4>
+								<p className='num-of-employees'>Emp No: 16 employees</p>
+								<p className='description'>
+									Description: Lorem Ispum Donor
+								</p>
+							</Link>
+						</HomeButton>
+						<HomeButton isSmallMode={false}>
+							<Link>
+								<h4 className='project-name'>123 Bryan Ave</h4>
+								<p className='num-of-employees'>Emp No: 16 employees</p>
+								<p className='description'>
+									Description: Lorem Ispum Donor
+								</p>
+							</Link>
+						</HomeButton>
+						<HomeButton isSmallMode={false}>
+							<Link>
+								<h4 className='project-name'>123 Bryan Ave</h4>
+								<p className='num-of-employees'>Emp No: 16 employees</p>
+								<p className='description'>
+									Description: Lorem Ispum Donor
+								</p>
+							</Link>
+						</HomeButton>
+						<HomeButton isSmallMode={false}>
+							<Link>
+								<h4 className='project-name'>123 Bryan Ave</h4>
+								<p className='num-of-employees'>Emp No: 16 employees</p>
+								<p className='description'>
+									Description: Lorem Ispum Donor
+								</p>
+							</Link>
+						</HomeButton>
+						<HomeButton isSmallMode={false}>
+							<Link>
+								<h4 className='project-name'>123 Bryan Ave</h4>
+								<p className='num-of-employees'>Emp No: 16 employees</p>
+								<p className='description'>
+									Description: Lorem Ispum Donor
+								</p>
+							</Link>
+						</HomeButton>
+						<HomeButton isSmallMode={false}>
+							<Link>
+								<h4 className='project-name'>123 Bryan Ave</h4>
+								<p className='num-of-employees'>Emp No: 16 employees</p>
+								<p className='description'>
+									Description: Lorem Ispum Donor
+								</p>
+							</Link>
+						</HomeButton>
+					</div>
 				</section>
 			</Layout>
 		</>
