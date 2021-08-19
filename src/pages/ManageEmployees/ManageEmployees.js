@@ -18,8 +18,12 @@ const ManageEmployees = () => {
 				</div>
 				<div className='employee-table'>
 					<div className='table-heading'>
-						<h4 className='number-col'>No.</h4>
-						<h4 className='employee-name-col'>Employee Name</h4>
+						<div className='number-col'>
+							<h4>No.</h4>
+						</div>
+						<div className='employee-name-col'>
+							<h4>Employee Name</h4>
+						</div>
 					</div>
 					<div className='table-data'>
 						<EmployeeListTableRows number={1} employeeName='Hisham' />

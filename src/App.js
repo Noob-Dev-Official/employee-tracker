@@ -8,6 +8,7 @@ import PrivateRoute from './components/PrivateRoute';
 import ForgotPassword from './pages/ForgotPassword';
 import UpdateProfile from './pages/UpdateProfile';
 import ManageEmployees from './pages/ManageEmployees/ManageEmployees';
+import ManageProjects from './pages/ManageProjects/ManageProjects';
 
 import './App.scss';
 
@@ -29,6 +30,11 @@ function App() {
 									exact
 									path='/manage-employees'
 									component={ManageEmployees}
+								/>
+								<PrivateRoute
+									exact
+									path='/manage-projects'
+									component={ManageProjects}
 								/>
 								<Route exact path='/sign-in'>
 									<SignIn />

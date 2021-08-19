@@ -19,6 +19,10 @@ const EmployeeListTableRowsParent = styled.div`
 		align-items: center;
 		text-align: center;
 
+		.number {
+			min-width: 12px;
+		}
+
 		.name {
 			margin-left: 470px;
 			text-align: center;
