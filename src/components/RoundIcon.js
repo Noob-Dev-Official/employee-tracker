@@ -3,12 +3,14 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 
 const RoundIconDiv = styled.div`
-	padding: 5px;
+	padding: 7px;
 	border-radius: 50%;
 	background-color: #c4c4c4;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	margin-right: ${({ marginRight }) =>
+		`${marginRight}` ? `${marginRight}` : 0};
 
 	${({ onHoverStyle }) =>
 		onHoverStyle &&
@@ -20,11 +22,15 @@ const RoundIconDiv = styled.div`
 `;
 
 const RoundIcon = (props) => {
-	const { children, onClick, onHoverStyle } = props;
+	const { children, onClick, onHoverStyle, marginRight } = props;
 
 	return (
 		<>
-			<RoundIconDiv onHoverStyle={onHoverStyle} onClick={onClick}>
+			<RoundIconDiv
+				marginRight={marginRight}
+				onHoverStyle={onHoverStyle}
+				onClick={onClick}
+			>
 				{children}
 			</RoundIconDiv>
 		</>

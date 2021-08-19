@@ -3,8 +3,10 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 
 import MenuDownArrowIcon from '../svg/MenuDownArrowIcon';
+import HomeIcon from '../svg/HomeIcon';
 import RoundIcon from './RoundIcon';
 import DropdownMenu from './DropdownMenu';
+import { Link } from 'react-router-dom';
 
 const NavbarParent = styled.nav`
 	display: flex;
@@ -21,6 +23,10 @@ const NavbarParent = styled.nav`
 		color: #0f4c75;
 		font-size: 1.8rem;
 	}
+
+	.nav-icons {
+		display: flex;
+	}
 `;
 
 const Navbar = () => {
@@ -34,10 +40,17 @@ const Navbar = () => {
 		<>
 			<NavbarParent>
 				<h1>EmpTracker</h1>
-				<RoundIcon onClick={onDropdownMenuClick} onHoverStyle={true}>
-					<MenuDownArrowIcon color='#000' width='35px' height='35px' />
-				</RoundIcon>
-				{dropdownOpen && <DropdownMenu />}
+				<div className='nav-icons'>
+					<RoundIcon onHoverStyle={true} marginRight='10px'>
+						<Link to='/'>
+							<HomeIcon width='35px' height='35px' color='#000' />
+						</Link>
+					</RoundIcon>
+					<RoundIcon onClick={onDropdownMenuClick} onHoverStyle={true}>
+						<MenuDownArrowIcon color='#000' width='35px' height='35px' />
+					</RoundIcon>
+					{dropdownOpen && <DropdownMenu />}
+				</div>
 			</NavbarParent>
 		</>
 	);

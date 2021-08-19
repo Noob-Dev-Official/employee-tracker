@@ -15,8 +15,6 @@ const ProjectTableRowsParent = styled.div`
 
 	.texts {
 		display: flex;
-		/* width: 876px; */
-		/* justify-content: space-between; */
 		align-items: center;
 		text-align: center;
 
