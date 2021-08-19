@@ -51,6 +51,7 @@ const ProjectTableRowsParent = styled.div`
 	.buttons {
 		display: flex;
 		align-items: center;
+		height: 37px;
 	}
 `;
 
@@ -75,7 +76,11 @@ const ProjectTableRows = (props) => {
 					</div>
 				</div>
 				<div className='buttons'>
-					<TableButton text='Timesheets' isDel={false} />
+					<TableButton
+						text='Timesheets'
+						isDel={false}
+						linkTo='/timesheets'
+					/>
 					<TableButton text='Edit' isDel={false} />
 					<TableButton text='Del' isDel={true} />
 				</div>
