@@ -3,7 +3,7 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 
 const RoundIconDiv = styled.div`
-	padding: 7px;
+	padding: 7px 10px;
 	border-radius: 50%;
 	background-color: #c4c4c4;
 	display: flex;

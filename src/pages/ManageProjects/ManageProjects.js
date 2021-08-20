@@ -3,6 +3,7 @@ import React from 'react';
 import Layout from '../../components/Layout';
 import GeneralButton from '../../components/GeneralButton';
 import ProjectTableRows from '../../components/ProjectTableRows';
+import SubTitle from '../../components/SubTitle';
 
 import './ManageProjects.scss';
 
@@ -11,7 +12,7 @@ const ManageProjects = () => {
 		<>
 			<Layout>
 				<div className='heading'>
-					<h3>Manage Projects</h3>
+					<SubTitle>Manage Projects</SubTitle>
 				</div>
 				<div className='add-project-btn'>
 					<GeneralButton text='Add Projects' />

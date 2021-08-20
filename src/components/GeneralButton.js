@@ -4,11 +4,15 @@ import styled from 'styled-components';
 
 const GeneralButtonParent = styled.div`
 	button {
-		padding: 15px 22px;
-		color: #fff;
-		background-color: #0f4c75;
-		border: 0px;
+		padding: 15px 30px;
+		color: ${({ color }) => (color ? `${color}` : '#fff')};
+		background-color: ${({ backgroundColor }) =>
+			backgroundColor ? `${backgroundColor}` : '#0f4c75'};
+		border: ${({ borderColor }) =>
+			borderColor ? `1px solid ${borderColor}` : '1px solid #0f4c75'};
 		border-radius: 5px;
+		margin-left: ${({ marginLeft }) => (marginLeft ? `${marginLeft}` : '0')};
+		min-width: 160px;
 
 		&:hover {
 			cursor: pointer;
@@ -19,11 +23,17 @@ const GeneralButtonParent = styled.div`
 `;
 
 const GeneralButton = (props) => {
-	const { text, onClick } = props;
+	const { text, onClick, color, backgroundColor, borderColor, marginLeft } =
+		props;
 
 	return (
 		<>
-			<GeneralButtonParent>
+			<GeneralButtonParent
+				color={color}
+				backgroundColor={backgroundColor}
+				borderColor={borderColor}
+				marginLeft={marginLeft}
+			>
 				<button onClick={onClick}>{text}</button>
 			</GeneralButtonParent>
 		</>
