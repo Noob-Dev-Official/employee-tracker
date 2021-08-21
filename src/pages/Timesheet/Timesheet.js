@@ -3,6 +3,7 @@ import React from 'react';
 import Layout from '../../components/Layout';
 import SubTitle from '../../components/SubTitle';
 import GeneralButton from '../../components/GeneralButton';
+import TimesheetTableRow from '../../components/TimesheetTableRow';
 
 import './Timesheet.scss';
 
@@ -45,6 +46,15 @@ const Timesheet = () => {
 						<div className='total-amount-col'>
 							<h4>Total Amount</h4>
 						</div>
+					</div>
+					<div className='table-data'>
+						<TimesheetTableRow
+							number={1}
+							employeeName='Furkan'
+							rate={10}
+							totalHours={100}
+							totalAmount={1000}
+						/>
 					</div>
 				</div>
 			</Layout>
