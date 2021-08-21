@@ -9,15 +9,15 @@ const GeneralButtonParent = styled.div`
 		background-color: ${({ backgroundColor }) =>
 			backgroundColor ? `${backgroundColor}` : '#0f4c75'};
 		border: ${({ borderColor }) =>
-			borderColor ? `1px solid ${borderColor}` : '1px solid #0f4c75'};
+			borderColor ? `2px solid ${borderColor}` : '2px solid #0f4c75'};
 		border-radius: 5px;
 		margin-left: ${({ marginLeft }) => (marginLeft ? `${marginLeft}` : '0')};
 		min-width: 160px;
 
 		&:hover {
 			cursor: pointer;
-			background-color: #0c3c5d;
-			transition: background 0.5s;
+			/* background-color: #0c3c5d;
+			transition: background 0.5s; */
 		}
 	}
 `;

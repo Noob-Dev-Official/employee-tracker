@@ -2,7 +2,7 @@ import React from 'react';
 
 import styled from 'styled-components';
 
-const HomeButtonParent = styled.div`
+const CardParent = styled.div`
 	display: flex;
 	flex-direction: ${({ isSmallMode }) => (isSmallMode ? 'row' : 'column')};
 	background-color: #bbe1fa;
@@ -25,16 +25,14 @@ const HomeButtonParent = styled.div`
 	}
 `;
 
-const HomeButton = (props) => {
+const Card = (props) => {
 	const { isSmallMode, children } = props;
 
 	return (
 		<>
-			<HomeButtonParent isSmallMode={isSmallMode}>
-				{children}
-			</HomeButtonParent>
+			<CardParent isSmallMode={isSmallMode}>{children}</CardParent>
 		</>
 	);
 };
 
-export default HomeButton;
+export default Card;

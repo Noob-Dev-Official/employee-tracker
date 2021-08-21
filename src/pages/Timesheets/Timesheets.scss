@@ -3,3 +3,25 @@
 	display: flex;
 	align-items: center;
 }
+
+.timesheets-section {
+	margin-top: 60px;
+
+	.timesheets {
+		display: flex;
+		flex-wrap: wrap;
+
+		h4 {
+			color: #0f4c75;
+		}
+
+		a {
+			text-decoration: none;
+			color: #000;
+
+			.num-of-employees {
+				padding: 11px 0 5px 0;
+			}
+		}
+	}
+}

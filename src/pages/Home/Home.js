@@ -4,7 +4,7 @@ import { Link, useHistory } from 'react-router-dom';
 import Alert from '../../components/Alert';
 import { useAuth } from '../../contexts/AuthContext';
 import Layout from '../../components/Layout';
-import HomeButton from '../../components/HomeButton';
+import Card from '../../components/Card';
 import ToolsIcon from '../../svg/ToolsIcon';
 import SettingsIcon from '../../svg/SettingsIcon';
 
@@ -26,7 +26,7 @@ const Home = () => {
 				<section className='tools-section'>
 					<h3>Tools</h3>
 					<div className='buttons'>
-						<HomeButton isSmallMode={true}>
+						<Card isSmallMode={true}>
 							<Link to='/manage-projects'>
 								<ToolsIcon
 									width='40px'
@@ -36,8 +36,8 @@ const Home = () => {
 								/>
 								<p>Projects</p>
 							</Link>
-						</HomeButton>
-						<HomeButton isSmallMode={true}>
+						</Card>
+						<Card isSmallMode={true}>
 							<Link to='/manage-employees'>
 								<ToolsIcon
 									width='40px'
@@ -47,8 +47,8 @@ const Home = () => {
 								/>
 								<p>Employees</p>
 							</Link>
-						</HomeButton>
-						<HomeButton isSmallMode={true}>
+						</Card>
+						<Card isSmallMode={true}>
 							<Link to='/settings'>
 								<SettingsIcon
 									width='40px'
@@ -58,13 +58,13 @@ const Home = () => {
 								/>
 								<p>Settings</p>
 							</Link>
-						</HomeButton>
+						</Card>
 					</div>
 				</section>
 				<section className='projects-section'>
 					<h3 className='title'>Projects</h3>
 					<div className='projects'>
-						<HomeButton isSmallMode={false}>
+						<Card isSmallMode={false}>
 							<Link>
 								<h4 className='project-name'>123 Bryan Ave</h4>
 								<p className='num-of-employees'>Emp No: 16 employees</p>
@@ -72,8 +72,8 @@ const Home = () => {
 									Description: Lorem Ispum Donor
 								</p>
 							</Link>
-						</HomeButton>
-						<HomeButton isSmallMode={false}>
+						</Card>
+						<Card isSmallMode={false}>
 							<Link>
 								<h4 className='project-name'>123 Bryan Ave</h4>
 								<p className='num-of-employees'>Emp No: 16 employees</p>
@@ -81,8 +81,8 @@ const Home = () => {
 									Description: Lorem Ispum Donor
 								</p>
 							</Link>
-						</HomeButton>
-						<HomeButton isSmallMode={false}>
+						</Card>
+						<Card isSmallMode={false}>
 							<Link>
 								<h4 className='project-name'>123 Bryan Ave</h4>
 								<p className='num-of-employees'>Emp No: 16 employees</p>
@@ -90,8 +90,8 @@ const Home = () => {
 									Description: Lorem Ispum Donor
 								</p>
 							</Link>
-						</HomeButton>
-						<HomeButton isSmallMode={false}>
+						</Card>
+						<Card isSmallMode={false}>
 							<Link>
 								<h4 className='project-name'>123 Bryan Ave</h4>
 								<p className='num-of-employees'>Emp No: 16 employees</p>
@@ -99,8 +99,8 @@ const Home = () => {
 									Description: Lorem Ispum Donor
 								</p>
 							</Link>
-						</HomeButton>
-						<HomeButton isSmallMode={false}>
+						</Card>
+						<Card isSmallMode={false}>
 							<Link>
 								<h4 className='project-name'>123 Bryan Ave</h4>
 								<p className='num-of-employees'>Emp No: 16 employees</p>
@@ -108,8 +108,8 @@ const Home = () => {
 									Description: Lorem Ispum Donor
 								</p>
 							</Link>
-						</HomeButton>
-						<HomeButton isSmallMode={false}>
+						</Card>
+						<Card isSmallMode={false}>
 							<Link>
 								<h4 className='project-name'>123 Bryan Ave</h4>
 								<p className='num-of-employees'>Emp No: 16 employees</p>
@@ -117,8 +117,8 @@ const Home = () => {
 									Description: Lorem Ispum Donor
 								</p>
 							</Link>
-						</HomeButton>
-						<HomeButton isSmallMode={false}>
+						</Card>
+						<Card isSmallMode={false}>
 							<Link>
 								<h4 className='project-name'>123 Bryan Ave</h4>
 								<p className='num-of-employees'>Emp No: 16 employees</p>
@@ -126,8 +126,8 @@ const Home = () => {
 									Description: Lorem Ispum Donor
 								</p>
 							</Link>
-						</HomeButton>
-						<HomeButton isSmallMode={false}>
+						</Card>
+						<Card isSmallMode={false}>
 							<Link>
 								<h4 className='project-name'>123 Bryan Ave</h4>
 								<p className='num-of-employees'>Emp No: 16 employees</p>
@@ -135,7 +135,7 @@ const Home = () => {
 									Description: Lorem Ispum Donor
 								</p>
 							</Link>
-						</HomeButton>
+						</Card>
 					</div>
 				</section>
 			</Layout>

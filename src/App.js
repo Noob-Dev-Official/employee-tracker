@@ -10,6 +10,7 @@ import UpdateProfile from './pages/UpdateProfile';
 import ManageEmployees from './pages/ManageEmployees/ManageEmployees';
 import ManageProjects from './pages/ManageProjects/ManageProjects';
 import Timesheets from './pages/Timesheets/Timesheets';
+import Timesheet from './pages/Timesheet/Timesheet';
 
 import './App.scss';
 
@@ -41,6 +42,11 @@ function App() {
 									exact
 									path='/timesheets'
 									component={Timesheets}
+								/>
+								<PrivateRoute
+									exact
+									path='/timesheet'
+									component={Timesheet}
 								/>
 								<Route exact path='/sign-in'>
 									<SignIn />
