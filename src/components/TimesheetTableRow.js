@@ -19,25 +19,78 @@ const TimesheetTableRowParent = styled.div`
 		align-items: center;
 		text-align: center;
 
+		.col {
+			/* min-width: 123px;
+			max-width: 123px; */
+			text-align: center;
+			white-space: nowrap;
+			overflow: hidden;
+
+			p {
+				text-overflow: ellipsis;
+			}
+		}
+
+		.number {
+			min-width: 30px;
+			max-width: 30px;
+		}
+
 		.employee-name {
-			margin-left: 290px;
+			margin-left: 234px;
+			min-width: 123px;
+			max-width: 123px;
 		}
 
 		.rate {
-			margin-left: 143px;
+			margin-left: 100px;
+			min-width: 35px;
+			max-width: 35px;
 		}
 
 		.total-hours {
-			margin-left: 132px;
+			min-width: 88px;
+			max-width: 88px;
+			margin-left: 100px;
 		}
 
 		.total-amount {
-			margin-left: 170px;
+			min-width: 102px;
+			max-width: 102px;
+			margin-left: 100px;
 		}
 	}
 
 	.buttons {
 		margin-right: 130px;
+	}
+
+	@media screen and (max-width: 1615px) {
+		.texts {
+			display: flex;
+			align-items: center;
+			text-align: center;
+
+			.employee-name {
+				margin-left: 200px;
+			}
+
+			.rate {
+				margin-left: 143px;
+			}
+
+			.total-hours {
+				margin-left: 132px;
+			}
+
+			.total-amount {
+				margin-left: 170px;
+			}
+		}
+
+		.buttons {
+			margin-right: 50px;
+		}
 	}
 `;
 
@@ -65,8 +118,8 @@ const TimesheetTableRow = (props) => {
 					</div>
 				</div>
 				<div className='buttons'>
-					<RoundSquareIcon>
-						<DownArrowIcon width='30px' height='30px' />
+					<RoundSquareIcon onHoverStyle={true}>
+						<DownArrowIcon width='30px' height='30px' color='#000' />
 					</RoundSquareIcon>
 				</div>
 			</TimesheetTableRowParent>

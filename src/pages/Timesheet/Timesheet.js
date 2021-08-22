@@ -40,10 +40,10 @@ const Timesheet = () => {
 						<div className='rate-col'>
 							<h4>Rate</h4>
 						</div>
-						<div className='col total-hrs-col'>
+						<div className='total-hrs-col'>
 							<h4>Total Hours</h4>
 						</div>
-						<div className='col total-amount-col'>
+						<div className='total-amount-col'>
 							<h4>Total Amount</h4>
 						</div>
 					</div>
@@ -71,10 +71,10 @@ const Timesheet = () => {
 						/>
 						<TimesheetTableRow
 							number={1}
-							employeeName='Furkan'
+							employeeName='Furkaaan'
 							rate={10}
 							totalHours={100}
-							totalAmount={1000}
+							totalAmount={100}
 						/>
 					</div>
 				</div>

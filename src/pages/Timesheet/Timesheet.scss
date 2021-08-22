@@ -21,3 +21,29 @@
 		}
 	}
 }
+
+@media screen and (max-width: 1615px) {
+	.timesheet-table {
+		margin-top: 60px;
+
+		.table-heading {
+			display: flex;
+			background-color: #fff;
+			width: 100%;
+			// max-width: 1171px;
+			padding: 18px 55px;
+			margin-bottom: 26px;
+
+			.employee-name-col {
+				margin-left: 150px;
+				text-align: center;
+			}
+
+			.rate-col,
+			.total-hrs-col,
+			.total-amount-col {
+				margin-left: 100px;
+			}
+		}
+	}
+}

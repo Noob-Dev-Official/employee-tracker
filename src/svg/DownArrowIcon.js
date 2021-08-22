@@ -8,7 +8,7 @@ const DownArrowIcon = ({ width, height, color, onClick }) => {
 			color={color}
 			onClick={onClick}
 			viewBox='0 0 24 24'
-			stroke-width='1.5'
+			stroke-width='2'
 			stroke='#2c3e50'
 			fill='none'
 			stroke-linecap='round'
