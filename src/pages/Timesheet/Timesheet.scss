@@ -2,22 +2,16 @@
 	margin-top: 60px;
 
 	.table-heading {
-		display: flex;
+		display: grid;
 		background-color: #fff;
-		width: 100%;
-		// max-width: 1171px;
+		grid-template-columns: 50px 300px 100px 200px 200px;
+		grid-gap: 1.5rem;
+		text-align: center;
 		padding: 18px 55px;
 		margin-bottom: 26px;
 
-		.employee-name-col {
-			margin-left: 234px;
-			text-align: center;
-		}
-
-		.rate-col,
-		.total-hrs-col,
-		.total-amount-col {
-			margin-left: 100px;
+		.number-col {
+			text-align: left;
 		}
 	}
 }

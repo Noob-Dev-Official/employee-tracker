@@ -15,13 +15,13 @@ const TimesheetTableRowParent = styled.div`
 	margin-top: 8px;
 
 	.texts {
-		display: flex;
-		align-items: center;
+		display: grid;
+		background-color: #fff;
+		grid-template-columns: 50px 300px 100px 200px 200px;
+		grid-gap: 1.5rem;
 		text-align: center;
 
 		.col {
-			/* min-width: 123px;
-			max-width: 123px; */
 			text-align: center;
 			white-space: nowrap;
 			overflow: hidden;
@@ -32,32 +32,7 @@ const TimesheetTableRowParent = styled.div`
 		}
 
 		.number {
-			min-width: 30px;
-			max-width: 30px;
-		}
-
-		.employee-name {
-			margin-left: 234px;
-			min-width: 123px;
-			max-width: 123px;
-		}
-
-		.rate {
-			margin-left: 100px;
-			min-width: 35px;
-			max-width: 35px;
-		}
-
-		.total-hours {
-			min-width: 88px;
-			max-width: 88px;
-			margin-left: 100px;
-		}
-
-		.total-amount {
-			min-width: 102px;
-			max-width: 102px;
-			margin-left: 100px;
+			text-align: left;
 		}
 	}
 
