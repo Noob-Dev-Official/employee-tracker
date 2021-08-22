@@ -72,19 +72,7 @@ const TimesheetTableRowParent = styled.div`
 			text-align: center;
 
 			.employee-name {
-				margin-left: 200px;
-			}
-
-			.rate {
-				margin-left: 143px;
-			}
-
-			.total-hours {
-				margin-left: 132px;
-			}
-
-			.total-amount {
-				margin-left: 170px;
+				margin-left: 150px;
 			}
 		}
 
