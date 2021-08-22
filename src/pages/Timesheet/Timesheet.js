@@ -40,14 +40,35 @@ const Timesheet = () => {
 						<div className='rate-col'>
 							<h4>Rate</h4>
 						</div>
-						<div className='total-hrs-col'>
+						<div className='col total-hrs-col'>
 							<h4>Total Hours</h4>
 						</div>
-						<div className='total-amount-col'>
+						<div className='col total-amount-col'>
 							<h4>Total Amount</h4>
 						</div>
 					</div>
 					<div className='table-data'>
+						<TimesheetTableRow
+							number={1}
+							employeeName='Furkan'
+							rate={10}
+							totalHours={100}
+							totalAmount={1000}
+						/>
+						<TimesheetTableRow
+							number={1}
+							employeeName='Furkan'
+							rate={10}
+							totalHours={100}
+							totalAmount={1000}
+						/>
+						<TimesheetTableRow
+							number={1}
+							employeeName='Furkan'
+							rate={10}
+							totalHours={100}
+							totalAmount={1000}
+						/>
 						<TimesheetTableRow
 							number={1}
 							employeeName='Furkan'

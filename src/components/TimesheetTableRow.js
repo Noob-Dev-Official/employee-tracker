@@ -10,7 +10,7 @@ const TimesheetTableRowParent = styled.div`
 	justify-content: space-between;
 	background-color: #fff;
 	width: 100%;
-	padding: 10px 55px;
+	padding: 5px 55px;
 	align-items: center;
 	margin-top: 8px;
 
@@ -34,6 +34,10 @@ const TimesheetTableRowParent = styled.div`
 		.total-amount {
 			margin-left: 170px;
 		}
+	}
+
+	.buttons {
+		margin-right: 130px;
 	}
 `;
 
@@ -60,7 +64,11 @@ const TimesheetTableRow = (props) => {
 						<p>{totalAmount}</p>
 					</div>
 				</div>
-				<div className='buttons'></div>
+				<div className='buttons'>
+					<RoundSquareIcon>
+						<DownArrowIcon width='30px' height='30px' />
+					</RoundSquareIcon>
+				</div>
 			</TimesheetTableRowParent>
 		</>
 	);

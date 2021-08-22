@@ -3,8 +3,8 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 
 const RoundSquareIconDiv = styled.div`
-	padding: 7px 10px;
-	border-radius: 50%;
+	padding: 7px 8px;
+	border-radius: 10px;
 	background-color: #bbe1fa;
 	display: flex;
 	align-items: center;
