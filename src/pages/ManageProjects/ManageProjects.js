@@ -42,7 +42,7 @@ const ManageProjects = () => {
 						<ProjectTableRows
 							number={100}
 							projectName='21 Ilford Avess'
-							description='lorem ispum donor'
+							description='lorem ispum donor donor dorner'
 							address='123 Bryant Ave'
 						/>
 					</div>

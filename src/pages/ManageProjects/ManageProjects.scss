@@ -8,25 +8,58 @@
 	margin-top: 40px;
 }
 
+// .project-table {
+// 	margin-top: 60px;
+
+// 	.table-heading {
+// 		display: flex;
+// 		background-color: #fff;
+// 		width: 100%;
+// 		// max-width: 1171px;
+// 		padding: 18px 55px;
+// 		margin-bottom: 26px;
+
+// 		.project-name-col {
+// 			margin-left: 82px;
+// 			text-align: center;
+// 		}
+
+// 		.description-col,
+// 		.address-col {
+// 			margin-left: 210px;
+// 		}
+// 	}
+// }
+
+/* grid layout testing */
 .project-table {
 	margin-top: 60px;
 
 	.table-heading {
-		display: flex;
+		display: grid;
 		background-color: #fff;
-		width: 100%;
-		// max-width: 1171px;
+		grid-template-columns: 50px 250px 350px 300px;
+		grid-gap: 1.5rem;
+		text-align: center;
 		padding: 18px 55px;
 		margin-bottom: 26px;
 
-		.project-name-col {
-			margin-left: 82px;
-			text-align: center;
+		.number-col {
+			text-align: left;
 		}
+	}
+}
 
-		.description-col,
-		.address-col {
-			margin-left: 210px;
-		}
+@media screen and (max-width: 1782px) {
+	.project-table .table-heading {
+		grid-gap: 1.2rem;
+		grid-template-columns: 30px 250px 250px 200px;
+	}
+}
+
+@media screen and (max-width: 1615px) {
+	.project-table .table-heading {
+		grid-gap: 1rem;
+		grid-template-columns: 30px 200px 200px 150px;
 	}
 }

@@ -14,13 +14,16 @@ const ProjectTableRowsParent = styled.div`
 	margin-top: 8px;
 
 	.texts {
-		display: flex;
+		/* display: flex;
 		align-items: center;
+		text-align: center; */
+		display: grid;
+		background-color: #fff;
+		grid-template-columns: 50px 250px 350px 300px;
+		grid-gap: 1.5rem;
 		text-align: center;
 
 		.col {
-			min-width: 130px;
-			max-width: 130px;
 			text-align: center;
 			white-space: nowrap;
 			overflow: hidden;
@@ -31,20 +34,7 @@ const ProjectTableRowsParent = styled.div`
 		}
 
 		.number {
-			min-width: 15px;
-			max-width: 15px;
-		}
-
-		.project-name {
-			margin-left: 89px;
-		}
-
-		.description {
-			margin-left: 179px;
-		}
-
-		.address {
-			margin-left: 147px;
+			text-align: left;
 		}
 	}
 
@@ -52,6 +42,20 @@ const ProjectTableRowsParent = styled.div`
 		display: flex;
 		align-items: center;
 		height: 37px;
+	}
+
+	@media screen and (max-width: 1782px) {
+		.texts {
+			grid-template-columns: 30px 250px 250px 200px;
+			grid-gap: 1.2rem;
+		}
+	}
+
+	@media screen and (max-width: 1615px) {
+		.texts {
+			grid-template-columns: 30px 200px 200px 150px;
+			grid-gap: 1rem;
+		}
 	}
 `;
 
