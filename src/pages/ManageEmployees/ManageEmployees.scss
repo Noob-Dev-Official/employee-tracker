@@ -12,16 +12,25 @@
 	margin-top: 60px;
 
 	.table-heading {
-		display: flex;
 		background-color: #fff;
+		display: grid;
+		grid-template-columns: 50px 300px;
+		grid-gap: 15rem;
+		text-align: center;
 		width: 100%;
 		max-width: 1171px;
 		padding: 18px 55px;
 		margin-bottom: 26px;
+	}
+}
 
-		.employee-name-col {
-			margin-left: 424px;
-			text-align: center;
+@media screen and (max-width: 1250px) {
+	.employee-table {
+		margin-top: 60px;
+
+		.table-heading {
+			grid-template-columns: 50px 300px;
+			grid-gap: 3rem;
 		}
 	}
 }

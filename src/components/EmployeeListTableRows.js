@@ -15,23 +15,26 @@ const EmployeeListTableRowsParent = styled.div`
 	margin-top: 8px;
 
 	.texts {
-		display: flex;
-		align-items: center;
+		display: grid;
+		grid-template-columns: 50px 300px;
+		grid-gap: 15rem;
 		text-align: center;
 
-		.number {
-			min-width: 12px;
-		}
-
-		.name {
-			margin-left: 470px;
-			text-align: center;
-		}
+		/* .number {
+			text-align: left;
+		} */
 	}
 
 	.buttons {
 		display: flex;
 		align-items: center;
+	}
+
+	@media screen and (max-width: 1250px) {
+		.texts {
+			grid-template-columns: 50px 300px;
+			grid-gap: 3rem;
+		}
 	}
 `;
 
