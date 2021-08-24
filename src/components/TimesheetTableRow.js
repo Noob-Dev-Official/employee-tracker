@@ -40,19 +40,21 @@ const TimesheetTableRowParent = styled.div`
 		margin-right: 130px;
 	}
 
+	/* @media screen and (max-width: 1782px) {
+		.texts {
+			grid-template-columns: 50px 280px 80px 100px 180px;
+			grid-gap: 1.2rem;
+		}
+	} */
+
 	@media screen and (max-width: 1615px) {
 		.texts {
-			display: flex;
-			align-items: center;
-			text-align: center;
-
-			.employee-name {
-				margin-left: 150px;
-			}
+			grid-template-columns: 50px 250px 80px 100px 150px;
+			grid-gap: 1.2rem;
 		}
 
 		.buttons {
-			margin-right: 50px;
+			margin-right: 140px;
 		}
 	}
 `;
