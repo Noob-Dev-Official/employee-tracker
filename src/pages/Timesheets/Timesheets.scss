@@ -1,27 +1,46 @@
 .btns {
-	margin-top: 46px;
-	display: flex;
-	align-items: center;
+    // margin-top: 46px;
+    // display: flex;
+    // align-items: center;
+
+    // @media (max-width: 900px) {
+    //     flex-direction: column;
+    // }
+
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    grid-template-rows: max-content;
+    grid-gap: 10px;
+
+    @media (max-width: 900px) {
+        justify-items: center;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 100%));
+    }
 }
 
 .timesheets-section {
-	margin-top: 60px;
+    margin-top: 60px;
 
-	.timesheets {
-		display: flex;
-		flex-wrap: wrap;
+    .timesheets {
+        // display: flex;
+        // flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+        margin: 0 auto 20px auto;
+        grid-gap: 10px;
 
-		h4 {
-			color: #0f4c75;
-		}
+        h4 {
+            color: #0f4c75;
+        }
 
-		a {
-			text-decoration: none;
-			color: #000;
+        a {
+            text-decoration: none;
+            color: #000;
 
-			.num-of-employees {
-				padding: 11px 0 5px 0;
-			}
-		}
-	}
+            .num-of-employees {
+                padding: 11px 0 5px 0;
+            }
+        }
+    }
 }

@@ -1,4 +1,4 @@
-const HomeIcon = ({ width, height }) => {
+const CornerUpRight = ({ width, height }) => {
     return (
         <svg
             xmlns='http://www.w3.org/2000/svg'
@@ -6,22 +6,20 @@ const HomeIcon = ({ width, height }) => {
             height={height}
             viewBox='0 0 24 24'
             strokeWidth='1.5'
-            stroke='#2c3e50'
+            stroke='#000'
             fill='none'
             strokeLinecap='round'
             strokeLinejoin='round'
         >
             <path stroke='none' d='M0 0h24v24H0z' fill='none' />
-            <polyline points='5 12 3 12 12 3 21 12 19 12' />
-            <path d='M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7' />
-            <path d='M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6' />
+            <path d='M6 18v-6a3 3 0 0 1 3 -3h10l-4 -4m0 8l4 -4' />
         </svg>
     );
 };
 
-export default HomeIcon;
+export default CornerUpRight;
 
-HomeIcon.defaultProps = {
+CornerUpRight.defaultProps = {
     width: '44px',
     height: '44px',
 };
