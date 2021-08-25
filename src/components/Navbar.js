@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import styled from 'styled-components';
 
@@ -12,58 +12,58 @@ import ContextDropdown from './ContextDropdown/ContextDropdown';
 import ContextHome from './ContextDropdown/CustomContextDropdowns/ContextHome';
 
 const NavbarParent = styled.nav`
-    display: flex;
-    justify-content: space-between;
-    margin-top: 80px;
-    user-select: none; /* supported by Chrome and Opera */
-    -webkit-user-select: none; /* Safari */
-    -khtml-user-select: none; /* Konqueror HTML */
-    -moz-user-select: none; /* Firefox */
-    -ms-user-select: none; /* Internet Explorer/Edge */
-    position: relative;
+	display: flex;
+	justify-content: space-between;
+	margin-top: 80px;
+	user-select: none; /* supported by Chrome and Opera */
+	-webkit-user-select: none; /* Safari */
+	-khtml-user-select: none; /* Konqueror HTML */
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* Internet Explorer/Edge */
+	position: relative;
 
-    h1 {
-        color: #0f4c75;
-        font-size: 1.8rem;
-    }
+	h1 {
+		color: #0f4c75;
+		font-size: 1.8rem;
+	}
 
-    .nav-icons {
-        display: flex;
-    }
+	.nav-icons {
+		display: flex;
+	}
 `;
 
 const Navbar = () => {
-    // const [dropdownOpen, setDropdownOpen] = useState(false);
+	// const [dropdownOpen, setDropdownOpen] = useState(false);
 
-    // const onDropdownMenuClick = () => {
-    //     setDropdownOpen((open) => !open);
-    // };
+	// const onDropdownMenuClick = () => {
+	//     setDropdownOpen((open) => !open);
+	// };
 
-    return (
-        <>
-            <NavbarParent>
-                <h1>EmpTracker</h1>
-                <div className='nav-icons'>
-                    <IconButton marginRight='10px'>
-                        <Link to='/'>
-                            <HomeIcon width='35px' height='35px' color='#000' />
-                        </Link>
-                    </IconButton>
-                    <ContextDropdown
-                        icon={
-                            <MenuDownArrowIcon
-                                color='#000'
-                                width='35px'
-                                height='35px'
-                            />
-                        }
-                    >
-                        <ContextHome />
-                    </ContextDropdown>
-                </div>
-            </NavbarParent>
-        </>
-    );
+	return (
+		<>
+			<NavbarParent>
+				<h1>EmpTracker</h1>
+				<div className='nav-icons'>
+					<IconButton marginRight='10px'>
+						<Link to='/'>
+							<HomeIcon width='35px' height='35px' color='#000' />
+						</Link>
+					</IconButton>
+					<ContextDropdown
+						icon={
+							<MenuDownArrowIcon
+								color='#000'
+								width='35px'
+								height='35px'
+							/>
+						}
+					>
+						<ContextHome />
+					</ContextDropdown>
+				</div>
+			</NavbarParent>
+		</>
+	);
 };
 
 export default Navbar;

@@ -2,7 +2,7 @@ import React from 'react';
 
 import styled from 'styled-components';
 
-import TableButton from './TableButton';
+// import TableButton from './TableButton';
 import ContextDropdown from '../components/ContextDropdown/ContextDropdown';
 import ContextProjectTableRows from '../components/ContextDropdown/CustomContextDropdowns/ContextProjectTableRows';
 import VerticalDots from '../svg/VerticalDots';
@@ -17,9 +17,6 @@ const ProjectTableRowsParent = styled.div`
 	margin-top: 8px;
 
 	.texts {
-		/* display: flex;
-		align-items: center;
-		text-align: center; */
 		display: grid;
 		background-color: #fff;
 		grid-template-columns: 50px 250px 350px 300px;

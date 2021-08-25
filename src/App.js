@@ -15,55 +15,55 @@ import Timesheet from './pages/Timesheet/Timesheet';
 import './App.scss';
 
 function App() {
-    return (
-        <>
-            <Router>
-                <div className='auth-app'>
-                    <div className='content'>
-                        <AuthProvider>
-                            <Switch>
-                                <PrivateRoute exact path='/' component={Home} />
-                                <PrivateRoute
-                                    exact
-                                    path='/update-profile'
-                                    component={UpdateProfile}
-                                />
-                                <PrivateRoute
-                                    exact
-                                    path='/manage-employees'
-                                    component={ManageEmployees}
-                                />
-                                <PrivateRoute
-                                    exact
-                                    path='/manage-projects'
-                                    component={ManageProjects}
-                                />
-                                <PrivateRoute
-                                    exact
-                                    path='/timesheets'
-                                    component={Timesheets}
-                                />
-                                <PrivateRoute
-                                    exact
-                                    path='/timesheet'
-                                    component={Timesheet}
-                                />
-                                <Route exact path='/sign-in'>
-                                    <SignIn />
-                                </Route>
-                                <Route exact path='/sign-up'>
-                                    <SignUp />
-                                </Route>
-                                <Route exact path='/forgot-password'>
-                                    <ForgotPassword />
-                                </Route>
-                            </Switch>
-                        </AuthProvider>
-                    </div>
-                </div>
-            </Router>
-        </>
-    );
+	return (
+		<>
+			<Router>
+				<div className='auth-app'>
+					<div className='content'>
+						<AuthProvider>
+							<Switch>
+								<PrivateRoute exact path='/' component={Home} />
+								<PrivateRoute
+									exact
+									path='/update-profile'
+									component={UpdateProfile}
+								/>
+								<PrivateRoute
+									exact
+									path='/manage-employees'
+									component={ManageEmployees}
+								/>
+								<PrivateRoute
+									exact
+									path='/manage-projects'
+									component={ManageProjects}
+								/>
+								<PrivateRoute
+									exact
+									path='/timesheets'
+									component={Timesheets}
+								/>
+								<PrivateRoute
+									exact
+									path='/timesheet'
+									component={Timesheet}
+								/>
+								<Route exact path='/sign-in'>
+									<SignIn />
+								</Route>
+								<Route exact path='/sign-up'>
+									<SignUp />
+								</Route>
+								<Route exact path='/forgot-password'>
+									<ForgotPassword />
+								</Route>
+							</Switch>
+						</AuthProvider>
+					</div>
+				</div>
+			</Router>
+		</>
+	);
 }
 
 export default App;
