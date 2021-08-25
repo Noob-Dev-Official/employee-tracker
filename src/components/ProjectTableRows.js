@@ -3,6 +3,9 @@ import React from 'react';
 import styled from 'styled-components';
 
 import TableButton from './TableButton';
+import ContextDropdown from '../components/ContextDropdown/ContextDropdown';
+import ContextProjectTableRows from '../components/ContextDropdown/CustomContextDropdowns/ContextProjectTableRows';
+import VerticalDots from '../svg/VerticalDots';
 
 const ProjectTableRowsParent = styled.div`
 	display: flex;
@@ -38,10 +41,11 @@ const ProjectTableRowsParent = styled.div`
 		}
 	}
 
-	.buttons {
-		display: flex;
-		align-items: center;
-		height: 37px;
+	@media screen and (max-width: 1782px) {
+		.texts {
+			grid-template-columns: 30px 250px 250px 200px;
+			grid-gap: 1.2rem;
+		}
 	}
 
 	@media screen and (max-width: 1615px) {
@@ -51,17 +55,21 @@ const ProjectTableRowsParent = styled.div`
 		}
 	}
 
-	@media screen and (max-width: 1782px) {
+	@media (max-width: 750px) {
+		padding: 10px 0 10px 55px;
 		.texts {
-			grid-template-columns: 30px 250px 250px 200px;
-			grid-gap: 1.2rem;
+			width: 100%;
+			grid-template-columns: 1fr 1fr;
+			text-align-last: center;
 		}
 	}
 `;
 
 const ProjectTableRows = (props) => {
 	const { number, projectName, description, address } = props;
+	function handleOnEdit() {}
 
+	function handleOnDelete() {}
 	return (
 		<>
 			<ProjectTableRowsParent>
@@ -79,14 +87,23 @@ const ProjectTableRows = (props) => {
 						<p>{address}</p>
 					</div>
 				</div>
-				<div className='buttons'>
-					<TableButton
-						text='Timesheets'
-						isDel={false}
-						linkTo='/timesheets'
-					/>
-					<TableButton text='Edit' isDel={false} />
-					<TableButton text='Del' isDel={true} />
+				{/* Useless due to width */}
+				{/* <div className='buttons'>
+                    <TableButton text='Timesheets' linkTo='/timesheets' />
+                    <TableButton text='Edit' />
+                    <TableButton text='Del' isDel />
+                </div> */}
+				<div className='muahhahaha'>
+					<ContextDropdown
+						icon={<VerticalDots />}
+						transparent
+						padding='7px'
+					>
+						<ContextProjectTableRows
+							handleOnEdit={handleOnEdit}
+							handleOnDelete={handleOnDelete}
+						/>
+					</ContextDropdown>
 				</div>
 			</ProjectTableRowsParent>
 		</>
