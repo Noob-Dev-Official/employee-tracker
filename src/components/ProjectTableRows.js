@@ -44,17 +44,17 @@ const ProjectTableRowsParent = styled.div`
 		height: 37px;
 	}
 
-	@media screen and (max-width: 1782px) {
-		.texts {
-			grid-template-columns: 30px 250px 250px 200px;
-			grid-gap: 1.2rem;
-		}
-	}
-
 	@media screen and (max-width: 1615px) {
 		.texts {
 			grid-template-columns: 30px 200px 200px 150px;
 			grid-gap: 1rem;
+		}
+	}
+
+	@media screen and (max-width: 1782px) {
+		.texts {
+			grid-template-columns: 30px 250px 250px 200px;
+			grid-gap: 1.2rem;
 		}
 	}
 `;
