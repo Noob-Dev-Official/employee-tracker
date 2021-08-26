@@ -8,17 +8,19 @@ import {
 } from './ContextStylings';
 import { IconButton } from '../global/ExportedStylings';
 
-const ContextDropdown = ({
-	icon,
-	stayOpen,
-	width,
-	height,
-	padding,
-	margin,
-	transparent,
-	parentWidth,
-	children,
-}) => {
+const ContextDropdown = (props) => {
+	const {
+		icon,
+		stayOpen,
+		width,
+		height,
+		padding,
+		margin,
+		transparent,
+		parentWidth,
+		children,
+	} = props;
+
 	const countref = useRef(0); // remove this
 	console.log('ContextDropdown.js: ' + countref.current++); // remove this
 

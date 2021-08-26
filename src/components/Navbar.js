@@ -9,7 +9,7 @@ import { IconButton } from './global/ExportedStylings';
 // import DropdownMenu from './DropdownMenu';
 import { Link } from 'react-router-dom';
 import ContextDropdown from './ContextDropdown/ContextDropdown';
-import ContextHome from './ContextDropdown/CustomContextDropdowns/ContextHome';
+import ContextNavbar from './ContextDropdown/CustomContextDropdowns/ContextNavbar';
 
 const NavbarParent = styled.nav`
 	display: flex;
@@ -58,7 +58,7 @@ const Navbar = () => {
 							/>
 						}
 					>
-						<ContextHome />
+						<ContextNavbar />
 					</ContextDropdown>
 				</div>
 			</NavbarParent>

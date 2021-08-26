@@ -13,7 +13,7 @@ import {
 	ContextItemWrapperLink,
 } from '../ContextStylings';
 
-const ContextHome = () => {
+const ContextNavbar = () => {
 	const countref = useRef(0); // remove this
 	console.log('ContextHome.js: ' + countref.current++); // remove this
 
@@ -54,4 +54,4 @@ const ContextHome = () => {
 	);
 };
 
-export default ContextHome;
+export default ContextNavbar;

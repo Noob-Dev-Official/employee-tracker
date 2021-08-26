@@ -6,7 +6,7 @@ import ContextDropdown from './ContextDropdown/ContextDropdown';
 import TableButton from './TableButton';
 
 import VerticalDots from '../svg/VerticalDots';
-import ContextListTableRows from './ContextDropdown/CustomContextDropdowns/ContextListTableRows';
+import ContextEmployeeTableRows from './ContextDropdown/CustomContextDropdowns/ContextEmployeeTableRows';
 
 const EmployeeListTableRowsParent = styled.div`
 	display: flex;
@@ -83,7 +83,7 @@ const EmployeeListTableRows = (props) => {
 						transparent
 						padding='7px'
 					>
-						<ContextListTableRows
+						<ContextEmployeeTableRows
 							handleOnEdit={handleOnEdit}
 							handleOnDelete={handleOnDelete}
 						/>
