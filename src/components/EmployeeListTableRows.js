@@ -33,13 +33,13 @@ const EmployeeListTableRowsParent = styled.div`
 		display: flex;
 		align-items: center;
 
-		@media (max-width: 1000px) {
+		@media screen and (max-width: 900px) {
 			display: none;
 		}
 	}
 
-	.muahhahaha {
-		@media (min-width: 1001px) {
+	.emp-row-dropdown-menu {
+		@media screen and (min-width: 900px) {
 			display: none;
 		}
 	}
@@ -51,9 +51,11 @@ const EmployeeListTableRowsParent = styled.div`
 		}
 	}
 
-	@media (max-width: 520px) {
+	@media screen and (max-width: 724px) {
 		padding: 10px 0;
+
 		.texts {
+			grid-gap: 4rem;
 			grid-template-columns: 50px 150px;
 		}
 	}
@@ -77,7 +79,7 @@ const EmployeeListTableRows = (props) => {
 					<TableButton text='Edit' />
 					<TableButton text='Del' isDel />
 				</div>
-				<div className='muahhahaha'>
+				<div className='emp-row-dropdown-menu'>
 					<ContextDropdown
 						icon={<VerticalDots />}
 						transparent

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 import Layout from '../../components/Layout';
 import SubTitle from '../../components/SubTitle';
-import GeneralButton from '../../components/GeneralButton';
+import { GeneralButton } from '../../components/global/ExportedStylings';
 import Card from '../../components/Card';
 
 import './Timesheets.scss';
@@ -22,24 +22,24 @@ const Timesheets = () => {
 				</div>
 				<div className='btns'>
 					<GeneralButton
-						text='Edit Project'
 						backgroundColor='#fff'
 						color='#000'
 						borderColor='#3282b8'
-					/>
+					>
+						Edit Project
+					</GeneralButton>
+					<GeneralButton marginLeft='20px' marginTop='10px'>
+						Add Timesheet
+					</GeneralButton>
 					<GeneralButton
-						text='Add Timesheet'
-						marginLeft='20px'
-						marginTop='10px'
-					/>
-					<GeneralButton
-						text='End Project'
 						backgroundColor='#e50000'
 						color='#fff'
 						borderColor='#e50000'
 						marginLeft='20px'
 						marginTop='10px'
-					/>
+					>
+						End Project
+					</GeneralButton>
 				</div>
 				<div className='timesheets-section'>
 					<SubTitle>Timesheets</SubTitle>

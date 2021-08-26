@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Layout from '../../components/Layout';
-import GeneralButton from '../../components/GeneralButton';
+import { GeneralButton } from '../../components/global/ExportedStylings';
 import EmployeeListTableRows from '../../components/EmployeeListTableRows';
 
 import './ManageEmployees.scss';
@@ -14,7 +14,7 @@ const ManageEmployees = () => {
 					<h3>Manage Employees</h3>
 				</div>
 				<div className='add-emp-btn'>
-					<GeneralButton text='Add Employees' />
+					<GeneralButton>Add Employees</GeneralButton>
 				</div>
 				<div className='employee-table'>
 					<div className='table-heading'>

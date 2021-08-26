@@ -30,6 +30,10 @@ const NavbarParent = styled.nav`
 	.nav-icons {
 		display: flex;
 	}
+
+	@media screen and (max-width: 900px) {
+		margin-top: 40px;
+	}
 `;
 
 const Navbar = () => {

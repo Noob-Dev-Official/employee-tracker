@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Layout from '../../components/Layout';
-import GeneralButton from '../../components/GeneralButton';
+import { GeneralButton } from '../../components/global/ExportedStylings';
 import ProjectTableRows from '../../components/ProjectTableRows';
 import SubTitle from '../../components/SubTitle';
 
@@ -15,7 +15,7 @@ const ManageProjects = () => {
 					<SubTitle>Manage Projects</SubTitle>
 				</div>
 				<div className='add-project-btn'>
-					<GeneralButton text='Add Projects' />
+					<GeneralButton>Add Projects</GeneralButton>
 				</div>
 				<div className='project-table'>
 					<div className='table-heading'>
