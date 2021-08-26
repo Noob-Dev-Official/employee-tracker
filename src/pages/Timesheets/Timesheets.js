@@ -27,13 +27,18 @@ const Timesheets = () => {
 						color='#000'
 						borderColor='#3282b8'
 					/>
-					<GeneralButton text='Add Timesheet' marginLeft='20px' />
+					<GeneralButton
+						text='Add Timesheet'
+						marginLeft='20px'
+						marginTop='10px'
+					/>
 					<GeneralButton
 						text='End Project'
 						backgroundColor='#e50000'
 						color='#fff'
 						borderColor='#e50000'
 						marginLeft='20px'
+						marginTop='10px'
 					/>
 				</div>
 				<div className='timesheets-section'>

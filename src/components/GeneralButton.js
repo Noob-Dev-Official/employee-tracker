@@ -6,9 +6,10 @@ const GeneralButtonParent = styled.div`
 	/* @media (max-width: 900px) {
 		width: 80%;
 	} */
-	@media (max-width: 768px) {
+	@media screen and (max-width: 724px) {
 		width: 100%;
 	}
+
 	button {
 		padding: 15px 30px;
 		color: ${({ color }) => (color ? `${color}` : '#fff')};
@@ -22,15 +23,24 @@ const GeneralButtonParent = styled.div`
 		cursor: pointer;
 		/* width: 100%; */
 
-		@media (max-width: 768px) {
+		@media screen and (max-width: 724px) {
 			width: 100%;
+			margin-left: 0;
+			margin-top: ${({ marginTop }) => (marginTop ? `${marginTop}` : '0')};
 		}
 	}
 `;
 
 const GeneralButton = (props) => {
-	const { text, onClick, color, backgroundColor, borderColor, marginLeft } =
-		props;
+	const {
+		text,
+		onClick,
+		color,
+		backgroundColor,
+		borderColor,
+		marginLeft,
+		marginTop,
+	} = props;
 
 	return (
 		<>
@@ -39,6 +49,7 @@ const GeneralButton = (props) => {
 				backgroundColor={backgroundColor}
 				borderColor={borderColor}
 				marginLeft={marginLeft}
+				marginTop={marginTop}
 			>
 				<button onClick={onClick}>{text}</button>
 			</GeneralButtonParent>

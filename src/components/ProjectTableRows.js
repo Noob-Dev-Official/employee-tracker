@@ -52,17 +52,14 @@ const ProjectTableRowsParent = styled.div`
 		}
 	}
 
-	@media screen and (max-width: 750px) {
+	@media screen and (max-width: 768px) {
 		padding: 10px 0 10px 55px;
 		.texts {
 			width: 100%;
 			grid-template-columns: 1fr 1fr;
 			text-align-last: center;
+			padding: 10px 0px 10px 25px;
 		}
-	}
-
-	@media screen and (max-width: 525px) {
-		padding: 10px 0px 10px 25px;
 	}
 `;
 

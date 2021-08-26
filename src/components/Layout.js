@@ -11,7 +11,13 @@ const LayoutDiv = styled.div`
 		margin: 0 100px;
 	}
 
-	@media screen and (max-width: 820px) {
+	//tablet
+	@media screen and (max-width: 995px) {
+		margin: 0 50px;
+	}
+
+	//mobile
+	@media screen and (max-width: 724px) {
 		margin: 0 10px;
 	}
 `;
