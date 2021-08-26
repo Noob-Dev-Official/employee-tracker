@@ -24,6 +24,7 @@ const ContextDropdown = (props) => {
 	const countref = useRef(0); // remove this
 	console.log('ContextDropdown.js: ' + countref.current++); // remove this
 
+	// eslint-disable-next-line
 	const { dropdownRef, isComponentVisible, handleClick, coords } =
 		useComponentVisible(stayOpen);
 
