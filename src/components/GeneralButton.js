@@ -3,10 +3,10 @@ import React from 'react';
 import styled from 'styled-components';
 
 const GeneralButtonParent = styled.div`
-	@media (max-width: 900px) {
+	/* @media (max-width: 900px) {
 		width: 80%;
-	}
-	@media (max-width: 400px) {
+	} */
+	@media (max-width: 768px) {
 		width: 100%;
 	}
 	button {
@@ -22,9 +22,8 @@ const GeneralButtonParent = styled.div`
 		cursor: pointer;
 		/* width: 100%; */
 
-		&:hover {
-			/* background-color: #0c3c5d;
-			transition: background 0.5s; */
+		@media (max-width: 768px) {
+			width: 100%;
 		}
 	}
 `;

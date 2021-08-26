@@ -52,13 +52,17 @@ const ProjectTableRowsParent = styled.div`
 		}
 	}
 
-	@media (max-width: 750px) {
+	@media screen and (max-width: 750px) {
 		padding: 10px 0 10px 55px;
 		.texts {
 			width: 100%;
 			grid-template-columns: 1fr 1fr;
 			text-align-last: center;
 		}
+	}
+
+	@media screen and (max-width: 525px) {
+		padding: 10px 0px 10px 25px;
 	}
 `;
 
@@ -90,7 +94,7 @@ const ProjectTableRows = (props) => {
                     <TableButton text='Edit' />
                     <TableButton text='Del' isDel />
                 </div> */}
-				<div className='muahhahaha'>
+				<div className='dropdown-buttons'>
 					<ContextDropdown
 						icon={<VerticalDots />}
 						transparent

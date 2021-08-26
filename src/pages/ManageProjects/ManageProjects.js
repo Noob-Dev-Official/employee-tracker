@@ -35,7 +35,7 @@ const ManageProjects = () => {
 					<div className='table-data'>
 						<ProjectTableRows
 							number={1}
-							projectName='123 Bryant Avess'
+							projectName='123 Bryant Avessssssssasdfasdf'
 							description='lorem ispum donor'
 							address='123 Bryant Ave'
 						/>
