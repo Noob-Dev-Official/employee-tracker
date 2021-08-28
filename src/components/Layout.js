@@ -7,7 +7,7 @@ import Navbar from './Navbar';
 const LayoutDiv = styled.div`
 	margin: 0px 150px;
 
-	@media screen and (max-width: 1024px) {
+	@media screen and (max-width: 1100px) {
 		margin: 0 100px;
 	}
 

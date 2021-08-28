@@ -38,16 +38,16 @@ const ProjectTableRowsParent = styled.div`
 		}
 	}
 
-	@media screen and (max-width: 1782px) {
+	@media screen and (max-width: 1500px) {
 		.texts {
-			grid-template-columns: 30px 250px 250px 200px;
-			grid-gap: 1.2rem;
+			grid-gap: 1.3rem;
+			grid-template-columns: 30px 200px 300px 250px;
 		}
 	}
 
-	@media screen and (max-width: 1615px) {
+	@media screen and (max-width: 1300px) {
 		.texts {
-			grid-template-columns: 30px 200px 200px 150px;
+			grid-template-columns: 30px 150px 250px 200px;
 			grid-gap: 1rem;
 		}
 	}

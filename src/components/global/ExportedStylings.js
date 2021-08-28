@@ -62,6 +62,14 @@ export const GeneralButton = styled.button`
 	cursor: pointer;
 	/* width: 100%; */
 
+	/* tablet */
+	@media screen and (max-width: 900px) {
+		width: 100%;
+		margin-left: 0;
+		margin-top: ${({ marginTop }) => (marginTop ? `${marginTop}` : '0')};
+	}
+
+	/* mobile */
 	@media screen and (max-width: 724px) {
 		width: 100%;
 		margin-left: 0;

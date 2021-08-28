@@ -1,34 +1,5 @@
-// .project-table {
-// 	margin-top: 60px;
-
-// 	.table-heading {
-// 		display: flex;
-// 		background-color: #fff;
-// 		width: 100%;
-// 		// max-width: 1171px;
-// 		padding: 18px 55px;
-// 		margin-bottom: 26px;
-
-// 		.project-name-col {
-// 			margin-left: 82px;
-// 			text-align: center;
-// 		}
-
-// 		.description-col,
-// 		.address-col {
-// 			margin-left: 210px;
-// 		}
-// 	}
-// }
-
 .add-project-btn {
 	margin-top: 40px;
-
-	// ** not needed
-	// @media (max-width: 900px) {
-	// 	display: flex;
-	// 	justify-content: center;
-	// }
 }
 
 .project-table {
@@ -49,17 +20,17 @@
 	}
 }
 
-@media screen and (max-width: 1782px) {
+@media screen and (max-width: 1500px) {
 	.project-table .table-heading {
-		grid-gap: 1.2rem;
-		grid-template-columns: 30px 250px 250px 200px;
+		grid-gap: 1.3rem;
+		grid-template-columns: 30px 200px 300px 250px;
 	}
 }
 
-@media screen and (max-width: 1615px) {
+@media screen and (max-width: 1300px) {
 	.project-table .table-heading {
 		grid-gap: 1rem;
-		grid-template-columns: 30px 200px 200px 150px;
+		grid-template-columns: 30px 150px 250px 200px;
 	}
 }
 

@@ -2,7 +2,7 @@ import React from 'react';
 
 import Layout from '../../components/Layout';
 import SubTitle from '../../components/SubTitle';
-import GeneralButton from '../../components/GeneralButton';
+import { GeneralButton } from '../../components/global/ExportedStylings';
 import TimesheetTableRow from '../../components/TimesheetTableRow';
 
 import './Timesheet.scss';
@@ -16,18 +16,21 @@ const Timesheet = () => {
 				</div>
 				<div className='btns'>
 					<GeneralButton
-						text='Edit Project'
 						backgroundColor='#fff'
 						color='#000'
 						borderColor='#3282b8'
-					/>
+					>
+						Edit Project
+					</GeneralButton>
 					<GeneralButton
-						text='End Project'
 						backgroundColor='#e50000'
 						color='#fff'
 						borderColor='#e50000'
 						marginLeft='29px'
-					/>
+						marginTop='10px'
+					>
+						End Project
+					</GeneralButton>
 				</div>
 				<div className='timesheet-table'>
 					<div className='table-heading'>
