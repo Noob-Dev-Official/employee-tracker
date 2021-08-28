@@ -16,13 +16,20 @@
 	}
 }
 
-@media screen and (max-width: 1615px) {
+@media screen and (max-width: 1450px) {
 	.timesheet-table {
-		margin-top: 60px;
-
 		.table-heading {
-			grid-template-columns: 50px 250px 80px 100px 150px;
+			grid-template-columns: 50px 250px 80px 150px 150px;
 			grid-gap: 1.2rem;
+		}
+	}
+}
+
+@media screen and (max-width: 1245px) {
+	.timesheet-table {
+		.table-heading {
+			grid-template-columns: 50px 200px 50px 100px 120px;
+			grid-gap: 1rem;
 		}
 	}
 }

@@ -37,24 +37,28 @@ const TimesheetTableRowParent = styled.div`
 	}
 
 	.buttons {
-		margin-right: 130px;
+		margin-right: 10px;
 	}
 
-	/* @media screen and (max-width: 1782px) {
+	@media screen and (max-width: 1450px) {
 		.texts {
-			grid-template-columns: 50px 280px 80px 100px 180px;
-			grid-gap: 1.2rem;
-		}
-	} */
-
-	@media screen and (max-width: 1615px) {
-		.texts {
-			grid-template-columns: 50px 250px 80px 100px 150px;
+			grid-template-columns: 50px 250px 80px 150px 150px;
 			grid-gap: 1.2rem;
 		}
 
 		.buttons {
-			margin-right: 140px;
+			margin-right: 15px;
+		}
+	}
+
+	@media screen and (max-width: 1245px) {
+		.texts {
+			grid-template-columns: 50px 200px 50px 100px 120px;
+			grid-gap: 1rem;
+		}
+
+		.buttons {
+			margin-right: 0px;
 		}
 	}
 `;
