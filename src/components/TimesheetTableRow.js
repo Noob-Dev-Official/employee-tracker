@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import styled from 'styled-components';
 
 import DownArrowIcon from '../svg/DownArrowIcon';
 import { IconButton } from './global/ExportedStylings';
+import TimesheetTable from './TimesheetTable';
 
 const TimesheetTableRowParent = styled.div`
 	display: flex;
@@ -66,6 +67,12 @@ const TimesheetTableRowParent = styled.div`
 const TimesheetTableRow = (props) => {
 	const { number, employeeName, rate, totalHours, totalAmount } = props;
 
+	const [isTimesheetTableOpen, setIsTimesheetTableOpen] = useState(false);
+
+	const onArrowButtonClick = (e) => {
+		setIsTimesheetTableOpen((prev) => !prev);
+	};
+
 	return (
 		<>
 			<TimesheetTableRowParent>
@@ -87,11 +94,17 @@ const TimesheetTableRow = (props) => {
 					</div>
 				</div>
 				<div className='buttons'>
-					<IconButton square>
-						<DownArrowIcon width='30px' height='30px' color='#000' />
+					<IconButton square onClick={onArrowButtonClick}>
+						<DownArrowIcon
+							width='30px'
+							height='30px'
+							color='#000'
+							isRotate={isTimesheetTableOpen}
+						/>
 					</IconButton>
 				</div>
 			</TimesheetTableRowParent>
+			{isTimesheetTableOpen && <TimesheetTable />}
 		</>
 	);
 };

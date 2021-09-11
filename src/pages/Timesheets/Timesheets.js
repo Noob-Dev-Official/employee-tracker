@@ -8,10 +8,10 @@ import { GeneralButton } from '../../components/global/ExportedStylings';
 import Card from '../../components/Card';
 
 import './Timesheets.scss';
-import {
-	TextContainer,
-	TextWrapper,
-} from '../../components/global/ExportedStylings';
+// import {
+// 	TextContainer,
+// 	TextWrapper,
+// } from '../../components/global/ExportedStylings';
 
 const Timesheets = () => {
 	return (
@@ -48,47 +48,28 @@ const Timesheets = () => {
 							<Link to='/timesheet'>
 								<h4 className='timesheet-name'>123 Bryan Ave</h4>
 								<p className='num-of-employees'>Emp No: 16 employees</p>
-								<TextContainer className='description'>
-									<TextWrapper>
-										Description: Lorem Ispum Donor Description: Lorem
-										Ispum Donor Description: Lorem Ispum Donor
-										Description: Lorem Ispum Donor Description: Lorem
-										Ispum Donor Description: Lorem Ispum Donor
-									</TextWrapper>
-								</TextContainer>
+								<p>Date: April 2021</p>
 							</Link>
 						</Card>
 						<Card>
 							<Link to='/timesheet'>
 								<h4 className='timesheet-name'>123 Bryan Ave</h4>
 								<p className='num-of-employees'>Emp No: 16 employees</p>
-								<TextContainer className='description'>
-									<TextWrapper>
-										Description: Lorem Ispum Donor
-									</TextWrapper>
-								</TextContainer>
+								<p>Date: April 2021</p>
 							</Link>
 						</Card>
 						<Card>
 							<Link to='/timesheet'>
 								<h4 className='timesheet-name'>123 Bryan Ave</h4>
 								<p className='num-of-employees'>Emp No: 16 employees</p>
-								<TextContainer className='description'>
-									<TextWrapper>
-										Description: Lorem Ispum Donor
-									</TextWrapper>
-								</TextContainer>
+								<p>Date: April 2021</p>
 							</Link>
 						</Card>
 						<Card>
 							<Link to='/timesheet'>
 								<h4 className='timesheet-name'>123 Bryan Ave</h4>
 								<p className='num-of-employees'>Emp No: 16 employees</p>
-								<TextContainer className='description'>
-									<TextWrapper>
-										Description: Lorem Ispum Donor
-									</TextWrapper>
-								</TextContainer>
+								<p>Date: April 2021</p>
 							</Link>
 						</Card>
 					</div>
