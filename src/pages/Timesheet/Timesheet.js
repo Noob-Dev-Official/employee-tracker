@@ -5,7 +5,7 @@ import React from 'react';
 import Layout from '../../components/Layout';
 import SubTitle from '../../components/SubTitle';
 import { GeneralButton } from '../../components/global/ExportedStylings';
-import TimesheetTableRow from '../../components/TimesheetTableRow';
+import TimesheetRow from '../../components/TimesheetRow';
 
 import './Timesheet.scss';
 
@@ -57,7 +57,7 @@ const Timesheet = () => {
 						</div>
 					</div>
 					<div className='table-data'>
-						<TimesheetTableRow
+						<TimesheetRow
 							number={1}
 							employeeName='Furkan'
 							rate={10}
@@ -65,21 +65,21 @@ const Timesheet = () => {
 							totalAmount={1000}
 						/>
 
-						<TimesheetTableRow
+						<TimesheetRow
 							number={1}
 							employeeName='Furkan'
 							rate={10}
 							totalHours={100}
 							totalAmount={1000}
 						/>
-						<TimesheetTableRow
+						<TimesheetRow
 							number={1}
 							employeeName='Furkan'
 							rate={10}
 							totalHours={100}
 							totalAmount={1000}
 						/>
-						<TimesheetTableRow
+						<TimesheetRow
 							number={1}
 							employeeName='Furkaaan'
 							rate={10}
