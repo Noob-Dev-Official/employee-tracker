@@ -2,7 +2,7 @@ import React from 'react';
 
 import styled from 'styled-components';
 
-import { Table, TableHead, TableBody, Input } from './Utils';
+import { Table, TableHead, TableBody } from './Utils';
 import TimesheetTableRow from './TimesheetTableRow';
 
 const TimesheetTableParent = styled.div`
