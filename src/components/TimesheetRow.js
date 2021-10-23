@@ -4,7 +4,8 @@ import styled from 'styled-components';
 
 import DownArrowIcon from '../svg/DownArrowIcon';
 import { IconButton } from './global/ExportedStylings';
-import TimesheetTable from './TimesheetTable';
+// import TimesheetTable from './TimesheetTable';
+import DemoTimesheetTable from './DemoTimesheetTable';
 
 const TimesheetRowParent = styled.div`
 	display: flex;
@@ -104,7 +105,8 @@ const TimesheetRow = (props) => {
 					</IconButton>
 				</div>
 			</TimesheetRowParent>
-			{isTimesheetTableOpen && <TimesheetTable />}
+			{/* {isTimesheetTableOpen && <TimesheetTable />} */}
+			{isTimesheetTableOpen && <DemoTimesheetTable />}
 		</>
 	);
 };
