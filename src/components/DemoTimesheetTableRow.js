@@ -1,37 +1,53 @@
 import React from 'react';
 
-import { TableBodyRow, Input } from './DemoTableComponents';
+import { TableBodyRow, Input, Select } from './DemoTableComponents';
 
-const TimesheetTableRow = (props) => {
-	const { days, months, rate, hour, total } = props;
+const DemoTimesheetTableRow = (props) => {
+	// const { days, months, rate, hour, total } = props;
 
 	return (
 		<>
-			<TableBodyRow>
+			<TableBodyRow textAlign='center'>
 				<td>
-					<select name='day' id='day-select'>
+					<Select
+						name='day'
+						id='day-select'
+						padding='2px 5px'
+						optionPadding='2px 5px'
+					>
 						<option value='01'>01</option>
 						<option value='02'>02</option>
-					</select>
+					</Select>
 				</td>
 				<td>
-					<select name='month' id='month-select'>
+					<Select
+						name='month'
+						id='month-select'
+						padding='2px 5px'
+						optionPadding='2px 5px'
+					>
 						<option value='01'>01</option>
 						<option value='02'>02</option>
-					</select>
+					</Select>
 				</td>
 				<td>
-					<Input type='number' name='rate' id='rate' />
+					<Input type='number' name='rate' id='rate' padding='2px 5px' />
 				</td>
 				<td>
-					<Input type='number' name='hour' id='hour' />
+					<Input type='number' name='hour' id='hour' padding='2px 5px' />
 				</td>
 				<td>
-					<Input type='number' name='total' id='total' />
+					<Input
+						type='number'
+						name='total'
+						id='total'
+						padding='2px 5px'
+						readOnly
+					/>
 				</td>
 			</TableBodyRow>
 		</>
 	);
 };
 
-export default TimesheetTableRow;
+export default DemoTimesheetTableRow;

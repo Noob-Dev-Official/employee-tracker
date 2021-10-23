@@ -21,10 +21,18 @@ export const TableBodyRow = styled.tr`
 	}
 `;
 
+export const Select = styled.select`
+	padding: ${({ padding }) => (padding ? padding : '0')};
+
+	option {
+		padding: ${({ optionPadding }) => (optionPadding ? optionPadding : '0')};
+	}
+`;
+
 export const Input = styled.input`
 	background-color: ${({ backgroundColor }) =>
 		backgroundColor ? backgroundColor : '#fff'};
-	border: ${({ border }) => (border ? border : '0')};
+	/* border: ${({ border }) => (border ? border : '0')}; */
 	max-width: ${({ maxWidth }) => (maxWidth ? maxWidth : 'auto')};
 	padding: ${({ padding }) => (padding ? padding : '0')};
 	text-align: ${({ textAlign }) => (textAlign ? textAlign : 'none')};

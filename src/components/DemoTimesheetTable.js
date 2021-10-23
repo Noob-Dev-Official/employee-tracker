@@ -2,6 +2,7 @@ import React from 'react';
 
 import styled from 'styled-components';
 
+import DemoTimesheetTableRow from './DemoTimesheetTableRow';
 import { Table, TableHead, TableBody } from './DemoTableComponents';
 
 const TimesheetTableParentDiv = styled.div`
@@ -26,52 +27,7 @@ const DemoTimesheetTable = () => {
 						</tr>
 					</TableHead>
 					<TableBody>
-						<tr>
-							<td>
-								<select name='day' id='day-select'>
-									<option value='01'>01</option>
-									<option value='02'>02</option>
-								</select>
-							</td>
-							<td>
-								<select name='month' id='month-select'>
-									<option value='01'>01</option>
-									<option value='02'>02</option>
-								</select>
-							</td>
-							<td>
-								<input type='number' name='rate' id='rate' />
-							</td>
-							<td>
-								<input type='number' name='hour' id='hour' />
-							</td>
-							<td>
-								<input type='number' name='total' id='total' />
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<select name='day' id='day-select'>
-									<option value='01'>01</option>
-									<option value='02'>02</option>
-								</select>
-							</td>
-							<td>
-								<select name='month' id='month-select'>
-									<option value='01'>01</option>
-									<option value='02'>02</option>
-								</select>
-							</td>
-							<td>
-								<input type='number' name='rate' id='rate' />
-							</td>
-							<td>
-								<input type='number' name='hour' id='hour' />
-							</td>
-							<td>
-								<input type='number' name='total' id='total' />
-							</td>
-						</tr>
+						<DemoTimesheetTableRow />
 					</TableBody>
 				</Table>
 			</TimesheetTableParentDiv>
