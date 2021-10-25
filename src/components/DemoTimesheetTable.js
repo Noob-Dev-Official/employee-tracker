@@ -27,10 +27,8 @@ const DemoTimesheetTable = () => {
 						</tr>
 					</TableHead>
 					<TableBody>
-						<DemoTimesheetTableRow
-							days={[1, 2, 3]}
-							months={['Jan', 'Feb']}
-						/>
+						<DemoTimesheetTableRow TimesheetTableId={123} />
+						<button className='add-row'>Add</button>
 					</TableBody>
 				</Table>
 			</TimesheetTableParentDiv>

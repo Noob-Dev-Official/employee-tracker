@@ -38,3 +38,12 @@ export const Input = styled.input`
 	text-align: ${({ textAlign }) => (textAlign ? textAlign : 'none')};
 	font-size: 1rem;
 `;
+
+export const Button = styled.button`
+	margin-left: ${({ marginLeft }) => (marginLeft ? marginLeft : '0')};
+	margin-top: ${({ marginTop }) => (marginTop ? marginTop : '0')};
+	padding: ${({ padding }) => (padding ? padding : '0')};
+	background-color: ${({ backgroundColor }) =>
+		backgroundColor ? backgroundColor : '0'};
+	color: ${({ color }) => (color ? color : '0')};
+`;
