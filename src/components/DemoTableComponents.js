@@ -1,49 +1,40 @@
 import styled from 'styled-components';
 
 export const Table = styled.table`
-	background-color: #fff;
-	width: ${({ width }) => (width ? width : 'auto')};
+   background-color: #fff;
+   width: ${({ width }) => (width ? width : 'auto')};
 `;
 
 export const TableHead = styled.thead`
-	tr {
-		th {
-			padding: ${({ padding }) => (padding ? padding : '0')};
-		}
-	}
+   tr {
+      th {
+         padding: ${({ padding }) => (padding ? padding : '0')};
+      }
+   }
 `;
 
 export const TableBody = styled.tbody``;
 
 export const TableBodyRow = styled.tr`
-	td {
-		text-align: ${({ textAlign }) => (textAlign ? textAlign : 'none')};
-	}
+   td {
+      text-align: ${({ textAlign }) => (textAlign ? textAlign : 'none')};
+   }
 `;
 
 export const Select = styled.select`
-	padding: ${({ padding }) => (padding ? padding : '0')};
+   padding: ${({ padding }) => (padding ? padding : '0')};
 
-	option {
-		padding: ${({ optionPadding }) => (optionPadding ? optionPadding : '0')};
-	}
+   option {
+      padding: ${({ optionPadding }) => (optionPadding ? optionPadding : '0')};
+   }
 `;
 
 export const Input = styled.input`
-	background-color: ${({ backgroundColor }) =>
-		backgroundColor ? backgroundColor : '#fff'};
-	/* border: ${({ border }) => (border ? border : '0')}; */
-	max-width: ${({ maxWidth }) => (maxWidth ? maxWidth : 'auto')};
-	padding: ${({ padding }) => (padding ? padding : '0')};
-	text-align: ${({ textAlign }) => (textAlign ? textAlign : 'none')};
-	font-size: 1rem;
-`;
-
-export const Button = styled.button`
-	margin-left: ${({ marginLeft }) => (marginLeft ? marginLeft : '0')};
-	margin-top: ${({ marginTop }) => (marginTop ? marginTop : '0')};
-	padding: ${({ padding }) => (padding ? padding : '0')};
-	background-color: ${({ backgroundColor }) =>
-		backgroundColor ? backgroundColor : '0'};
-	color: ${({ color }) => (color ? color : '0')};
+   background-color: ${({ backgroundColor }) =>
+      backgroundColor ? backgroundColor : '#fff'};
+   /* border: ${({ border }) => (border ? border : '0')}; */
+   max-width: ${({ maxWidth }) => (maxWidth ? maxWidth : 'auto')};
+   padding: ${({ padding }) => (padding ? padding : '0')};
+   text-align: ${({ textAlign }) => (textAlign ? textAlign : 'none')};
+   font-size: 1rem;
 `;

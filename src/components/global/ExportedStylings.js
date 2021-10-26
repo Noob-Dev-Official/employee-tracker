@@ -77,3 +77,18 @@ export const GeneralButton = styled.button`
       margin-top: ${({ marginTop }) => (marginTop ? `${marginTop}` : '0')};
    }
 `;
+
+export const SmallTableButton = styled.button`
+   margin-left: ${({ marginLeft }) => (marginLeft ? marginLeft : '0')};
+   margin-top: ${({ marginTop }) => (marginTop ? marginTop : '0')};
+   margin-bottom: ${({ marginBottom }) => (marginBottom ? marginBottom : '0')};
+   padding: 10px 20px;
+   background-color: ${({ backgroundColor }) =>
+      backgroundColor ? backgroundColor : '0'};
+   color: ${({ color }) => (color ? color : '0')};
+   border: ${({ borderColor }) =>
+      borderColor ? `2px solid ${borderColor}` : '2px solid #0f4c75'};
+   border-radius: 5px;
+   cursor: pointer;
+   min-width: 80px;
+`;
