@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 
 import styled from 'styled-components';
+// import Select from 'react-select';
 
 import DownArrowIcon from '../svg/DownArrowIcon';
 import { IconButton } from './global/ExportedStylings';
 // import TimesheetTable from './TimesheetTable';
 import DemoTimesheetTable from './DemoTimesheetTable';
+// import { ReactSelect } from './Utils';
 
 const TimesheetRowParent = styled.div`
 	display: flex;
@@ -66,9 +68,37 @@ const TimesheetRowParent = styled.div`
 `;
 
 const TimesheetRow = (props) => {
-	const { number, employeeName, rate, totalHours, totalAmount } = props;
+	const {
+		number,
+		employeeSelected,
+		employeeOnChange,
+		employeeName,
+		rate,
+		totalHours,
+		totalAmount,
+	} = props;
 
 	const [isTimesheetTableOpen, setIsTimesheetTableOpen] = useState(false);
+
+	/* for employee dropdown */
+	const employees = [
+		{
+			label: 'Furkan',
+			value: 'Furkan',
+		},
+		{
+			label: 'Haroon',
+			value: 'Furkan',
+		},
+		{
+			label: 'Adam',
+			value: 'Adam',
+		},
+		{
+			label: 'Hisham',
+			value: 'Hisham',
+		},
+	];
 
 	const onArrowButtonClick = (e) => {
 		setIsTimesheetTableOpen((prev) => !prev);
@@ -83,6 +113,23 @@ const TimesheetRow = (props) => {
 					</div>
 					<div className='col employee-name'>
 						<p>{employeeName}</p>
+						{/* <ReactSelect
+							name='employee'
+							id='employee-select'
+							options={employees}
+							value={employee}
+							onChange={employeeOnChange}
+							// styles={styles}
+							// padding='2px 5px'
+							// optionPadding='2px 5px'
+							// value={daySelected}
+							// onChange={onDayChange}
+						/> */}
+						{/* <select name='employee' value={employeeSelected}>
+							{employees.map((employee) => (
+								<option value={employee.value}>{employee.label}</option>
+							))}
+						</select> */}
 					</div>
 					<div className='col rate'>
 						<p>{rate}</p>

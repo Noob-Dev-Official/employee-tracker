@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 // const { datesGenerator } = require('dates-generator');
 
@@ -14,6 +14,13 @@ const test = () => {};
 test();
 
 const Timesheet = () => {
+	/* for employees in TimesheetRow */
+	const [employee, setEmployee] = useState();
+
+	const onEmployeeChange = (e) => {
+		setEmployee({ employee: e.target.value });
+	};
+
 	return (
 		<>
 			<Layout>
@@ -60,6 +67,8 @@ const Timesheet = () => {
 						<TimesheetRow
 							number={1}
 							employeeName='Furkan'
+							employeeSelected={employee}
+							employeeOnChange={onEmployeeChange}
 							rate={10}
 							totalHours={100}
 							totalAmount={1000}

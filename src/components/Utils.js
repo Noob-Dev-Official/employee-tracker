@@ -1,4 +1,7 @@
+import React from 'react';
+
 import styled from 'styled-components';
+import Select from 'react-select';
 
 export const Table = styled.table`
 	border-left: ${({ borderLeft }) => (borderLeft ? borderLeft : '0')};
@@ -60,3 +63,31 @@ export const Input = styled.input`
 	text-align: ${({ textAlign }) => (textAlign ? textAlign : 'none')};
 	font-size: 1rem;
 `;
+
+export const ReactSelect = (props) => {
+	const { name, options, onChange, required, value } = props;
+
+	const styles = {
+		control: (base) => ({
+			...base,
+			fontFamily: 'sans-serif',
+			// minWidth: '50px',
+			padding: '0 10px',
+		}),
+		menu: (base) => ({
+			...base,
+			fontFamily: 'sans-serif',
+		}),
+	};
+
+	return (
+		<Select
+			name={name}
+			styles={styles}
+			options={options}
+			onChange={onChange}
+			required={required}
+			value={value}
+		/>
+	);
+};
