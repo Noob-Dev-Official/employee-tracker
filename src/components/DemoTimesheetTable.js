@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import styled from 'styled-components';
+import { useDispatch, useSelector } from 'react-redux';
 
+import { addTimesheetTableRow } from '../redux/ducks/Timesheet';
 import DemoTimesheetTableRow from './DemoTimesheetTableRow';
 import { Table, TableHead, TableBody } from './DemoTableComponents';
 import { SmallTableButton } from './global/ExportedStylings';
@@ -15,11 +17,20 @@ const TimesheetTableParentDiv = styled.div`
 `;
 
 const DemoTimesheetTable = () => {
-	const [numberOfRows, setNumberOfRows] = useState(0);
+	// const [numberOfRows, setNumberOfRows] = useState(0);
+
+	const numberOfRows = useSelector(
+		(state) => state.timesheet.timesheet_num_row.num,
+	);
+
+	const dispatch = useDispatch();
 
 	const onButtonClick = () => {
-		setNumberOfRows((prev) => prev + 1);
+		// setNumberOfRows((prev) => prev + 1);
+		dispatch(addTimesheetTableRow());
 	};
+
+	console.log(numberOfRows);
 
 	return (
 		<>

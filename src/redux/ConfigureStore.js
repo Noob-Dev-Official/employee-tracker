@@ -1,3 +1,11 @@
 import { combineReducers, createStore } from 'redux';
 
-// const rootReducer =
+import timesheetReducer from './ducks/Timesheet';
+
+const rootReducer = combineReducers({
+	timesheet: timesheetReducer,
+});
+
+const store = createStore(rootReducer);
+
+export default store;

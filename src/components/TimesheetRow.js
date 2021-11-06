@@ -70,8 +70,8 @@ const TimesheetRowParent = styled.div`
 const TimesheetRow = (props) => {
 	const {
 		number,
-		employeeSelected,
-		employeeOnChange,
+		// employeeSelected,
+		// employeeOnChange,
 		employeeName,
 		rate,
 		totalHours,
@@ -81,24 +81,24 @@ const TimesheetRow = (props) => {
 	const [isTimesheetTableOpen, setIsTimesheetTableOpen] = useState(false);
 
 	/* for employee dropdown */
-	const employees = [
-		{
-			label: 'Furkan',
-			value: 'Furkan',
-		},
-		{
-			label: 'Haroon',
-			value: 'Furkan',
-		},
-		{
-			label: 'Adam',
-			value: 'Adam',
-		},
-		{
-			label: 'Hisham',
-			value: 'Hisham',
-		},
-	];
+	// const employees = [
+	// 	{
+	// 		label: 'Furkan',
+	// 		value: 'Furkan',
+	// 	},
+	// 	{
+	// 		label: 'Haroon',
+	// 		value: 'Furkan',
+	// 	},
+	// 	{
+	// 		label: 'Adam',
+	// 		value: 'Adam',
+	// 	},
+	// 	{
+	// 		label: 'Hisham',
+	// 		value: 'Hisham',
+	// 	},
+	// ];
 
 	const onArrowButtonClick = (e) => {
 		setIsTimesheetTableOpen((prev) => !prev);
