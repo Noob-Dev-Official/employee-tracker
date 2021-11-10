@@ -3,7 +3,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { addTimesheetTableRow } from '../redux/ducks/Timesheet';
+import { addTimesheetTableRowCount } from '../redux/ducks/Timesheet';
 import DemoTimesheetTableRow from './DemoTimesheetTableRow';
 import { Table, TableHead, TableBody } from './DemoTableComponents';
 import { SmallTableButton } from './global/ExportedStylings';
@@ -20,14 +20,14 @@ const DemoTimesheetTable = () => {
 	// const [numberOfRows, setNumberOfRows] = useState(0);
 
 	const numberOfRows = useSelector(
-		(state) => state.timesheet.timesheet_num_row.num,
+		(state) => state.timesheet.timesheet_table_row_count.num,
 	);
 
 	const dispatch = useDispatch();
 
 	const onButtonClick = () => {
 		// setNumberOfRows((prev) => prev + 1);
-		dispatch(addTimesheetTableRow());
+		dispatch(addTimesheetTableRowCount());
 	};
 
 	console.log(numberOfRows);
