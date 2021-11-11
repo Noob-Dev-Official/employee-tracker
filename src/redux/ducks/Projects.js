@@ -11,6 +11,9 @@ const initialState = {
 		address: '',
 		completed: false,
 	},
+	projects_count: {
+		num: 0,
+	},
 };
 
 /* increment project count */
@@ -22,4 +25,17 @@ export const addProjectCount = () => ({
 });
 
 /* reducer */
-const projectsReducer = (state = initialState, action) => {};
+const projectsReducer = (state = initialState, action) => {
+	switch (action.type) {
+		case ADD_PROJECTS_COUNT: {
+			return {
+				...state,
+				projects_count: {
+					num: state.projects_count.num + 1,
+				},
+			};
+		}
+	}
+};
+
+export default projectsReducer;
