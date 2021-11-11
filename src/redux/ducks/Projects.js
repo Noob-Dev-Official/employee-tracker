@@ -35,6 +35,8 @@ const projectsReducer = (state = initialState, action) => {
 				},
 			};
 		}
+		default:
+			return state;
 	}
 };
 
