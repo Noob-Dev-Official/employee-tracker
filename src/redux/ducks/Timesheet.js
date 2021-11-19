@@ -31,7 +31,7 @@ const timesheetReducer = (state = initialState, action) => {
 		case ADD_TIMESHEET_TABLE_ROW_COUNT: {
 			return {
 				...state,
-				timesheet_num_row: {
+				timesheet_table_row_count: {
 					num: state.timesheet_table_row_count.num + 1,
 				},
 			};
