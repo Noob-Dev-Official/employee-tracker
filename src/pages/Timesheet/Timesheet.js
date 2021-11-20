@@ -81,7 +81,7 @@ const Timesheet = () => {
 							totalHours={100}
 							totalAmount={1000}
 						/>
-						<TimesheetRow
+						{/* <TimesheetRow
 							number={1}
 							employeeName='Furkan'
 							rate={10}
@@ -94,7 +94,7 @@ const Timesheet = () => {
 							rate={10}
 							totalHours={100}
 							totalAmount={100}
-						/>
+						/> */}
 					</div>
 				</div>
 			</Layout>
