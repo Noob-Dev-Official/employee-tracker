@@ -4,16 +4,26 @@ import { v4 as uuidV4 } from 'uuid';
 /* state */
 const initialState = {
 	timesheet_row: [
-		// {
-		// 	id: 0,
-		// 	day: 0,
-		// 	month: 0,
-		// 	year: 0,
-		// 	rate: 0,
-		// 	hour: 0,
-		// 	total: 0,
-		// 	timesheet_id: 0, // this could be UID
-		// },
+		{
+			id: 0,
+			day: 0,
+			month: 0,
+			year: 0,
+			rate: 0,
+			hour: 0,
+			total: 0,
+			timesheet_id: 0, // this could be UID
+		},
+		{
+			id: 0,
+			day: 0,
+			month: 0,
+			year: 0,
+			rate: 0,
+			hour: 0,
+			total: 0,
+			timesheet_id: 0, // this could be UID
+		},
 	],
 	timesheet_row_count: {
 		num: 0,
@@ -55,6 +65,7 @@ export const addTimesheet = (
 	year,
 	rate,
 	total,
+	hour,
 	timesheet_id,
 });
 

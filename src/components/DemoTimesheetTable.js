@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import styled from 'styled-components';
 import { useDispatch, useSelector } from 'react-redux';
@@ -18,9 +18,14 @@ const TimesheetTableParentDiv = styled.div`
 
 const DemoTimesheetTable = () => {
 	// const [numberOfRows, setNumberOfRows] = useState(0);
+	const [timesheetTableRowIndex, setTimesheetTableRowIndex] = useState(-1);
 
 	const numberOfRows = useSelector(
 		(state) => state.timesheet.timesheet_table_row_count.num,
+	);
+
+	const timesheetTableRowData = useSelector(
+		(state) => state.timesheetRow.timesheet_row,
 	);
 
 	const dispatch = useDispatch();
@@ -29,8 +34,6 @@ const DemoTimesheetTable = () => {
 		// setNumberOfRows((prev) => prev + 1);
 		dispatch(addTimesheetTableRowCount());
 	};
-
-	console.log(numberOfRows);
 
 	return (
 		<>
@@ -46,8 +49,15 @@ const DemoTimesheetTable = () => {
 						</tr>
 					</TableHead>
 					<TableBody>
-						{/* <DemoTimesheetTableRow TimesheetTableId={123} />
-                  <DemoTimesheetTableRow TimesheetTableId={123} /> */}
+						{timesheetTableRowData.map((data) => {
+							return (
+								<DemoTimesheetTableRow
+									TimesheetTableId={123}
+									index={timesheetTableRowIndex}
+									key={data.id}
+								/>
+							);
+						})}
 						{Array.from(Array(numberOfRows), () => {
 							return <DemoTimesheetTableRow TimesheetTableId={123} />;
 						})}
