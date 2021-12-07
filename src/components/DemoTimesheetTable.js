@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import styled from 'styled-components';
 import { useDispatch, useSelector } from 'react-redux';
 // eslint-disable-next-line
 import { v4 as uuidV4 } from 'uuid';
 
-import { addTimesheetTableRowCount } from '../redux/ducks/Timesheet';
+// import { addTimesheetTableRowCount } from '../redux/ducks/Timesheet';
 import { addTimesheet } from '../redux/ducks/TimesheetRow';
 import DemoTimesheetTableRow from './DemoTimesheetTableRow';
 import { Table, TableHead, TableBody } from './DemoTableComponents';
@@ -20,12 +20,9 @@ const TimesheetTableParentDiv = styled.div`
 `;
 
 const DemoTimesheetTable = () => {
-	// const [numberOfRows, setNumberOfRows] = useState(0);
-	const [timesheetTableRowIndex, setTimesheetTableRowIndex] = useState(-1);
-
-	const numberOfRows = useSelector(
-		(state) => state.timesheet.timesheet_table_row_count.num,
-	);
+	// const numberOfRows = useSelector(
+	// 	(state) => state.timesheet.timesheet_table_row_count.num,
+	// );
 
 	const timesheetTableRowData = useSelector(
 		(state) => state.timesheetRow.timesheet_row,
@@ -34,17 +31,8 @@ const DemoTimesheetTable = () => {
 	const dispatch = useDispatch();
 
 	const onAddButtonClick = () => {
-		// setNumberOfRows((prev) => prev + 1);
-		// dispatch(addTimesheetTableRowCount());
-
 		dispatch(addTimesheet(uuidV4(), 0, 0, 0, 0, 0, 0, 324324));
 	};
-
-	// const timesheetTableRowComp = (props) => {
-	// 	setTimesheetTableRowIndex((prev) => prev + 1);
-
-	// 	return <DemoTimesheetTableRow index={timesheetTableRowIndex} key={props.key} />;
-	// };
 
 	return (
 		<>
@@ -60,19 +48,6 @@ const DemoTimesheetTable = () => {
 						</tr>
 					</TableHead>
 					<TableBody>
-						{/* {timesheetTableRowData.map((data) => {
-							return (
-								<DemoTimesheetTableRow
-									index={timesheetTableRowIndex}
-									key={data.id}
-								/>
-							);
-							// return timesheetTableRowComp({key: data.id});
-						})}
-						{Array.from(Array(numberOfRows), () => {
-							return <DemoTimesheetTableRow key={123} />;
-							// return timesheetTableRowComp({key: 123});
-						})} */}
 						{timesheetTableRowData.map((data, index) => {
 							return (
 								<DemoTimesheetTableRow key={data.id} index={index} />
