@@ -2,8 +2,11 @@ import React, { useState } from 'react';
 
 import styled from 'styled-components';
 import { useDispatch, useSelector } from 'react-redux';
+// eslint-disable-next-line
+import { v4 as uuidV4 } from 'uuid';
 
 import { addTimesheetTableRowCount } from '../redux/ducks/Timesheet';
+import { addTimesheet } from '../redux/ducks/TimesheetRow';
 import DemoTimesheetTableRow from './DemoTimesheetTableRow';
 import { Table, TableHead, TableBody } from './DemoTableComponents';
 import { SmallTableButton } from './global/ExportedStylings';
@@ -32,8 +35,16 @@ const DemoTimesheetTable = () => {
 
 	const onAddButtonClick = () => {
 		// setNumberOfRows((prev) => prev + 1);
-		dispatch(addTimesheetTableRowCount());
+		// dispatch(addTimesheetTableRowCount());
+
+		dispatch(addTimesheet(uuidV4(), 0, 0, 0, 0, 0, 0, 324324));
 	};
+
+	// const timesheetTableRowComp = (props) => {
+	// 	setTimesheetTableRowIndex((prev) => prev + 1);
+
+	// 	return <DemoTimesheetTableRow index={timesheetTableRowIndex} key={props.key} />;
+	// };
 
 	return (
 		<>
@@ -49,17 +60,23 @@ const DemoTimesheetTable = () => {
 						</tr>
 					</TableHead>
 					<TableBody>
-						{timesheetTableRowData.map((data) => {
+						{/* {timesheetTableRowData.map((data) => {
 							return (
 								<DemoTimesheetTableRow
-									TimesheetTableId={123}
 									index={timesheetTableRowIndex}
 									key={data.id}
 								/>
 							);
+							// return timesheetTableRowComp({key: data.id});
 						})}
 						{Array.from(Array(numberOfRows), () => {
-							return <DemoTimesheetTableRow TimesheetTableId={123} />;
+							return <DemoTimesheetTableRow key={123} />;
+							// return timesheetTableRowComp({key: 123});
+						})} */}
+						{timesheetTableRowData.map((data, index) => {
+							return (
+								<DemoTimesheetTableRow key={data.id} index={index} />
+							);
 						})}
 					</TableBody>
 				</Table>

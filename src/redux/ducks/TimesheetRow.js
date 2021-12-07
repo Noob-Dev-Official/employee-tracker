@@ -14,16 +14,6 @@ const initialState = {
 			total: 0,
 			timesheet_id: 0, // this could be UID
 		},
-		{
-			id: 0,
-			day: 0,
-			month: 0,
-			year: 0,
-			rate: 0,
-			hour: 0,
-			total: 0,
-			timesheet_id: 0, // this could be UID
-		},
 	],
 	timesheet_row_count: {
 		num: 0,
@@ -40,8 +30,8 @@ const initialState = {
 
 const ADD_TIMESHEET_ROW_COUNT = 'ADD_TIMESHEET_ROW_COUNT';
 const ADD_TIMESHEET_ROW = 'ADD_TIMESHEET_ROW';
-const DELETE_TIMESHEET_ROW = 'DELETE_TIMESHEET_ROW';
-const UPDATE_TIMESHEET_ROW = 'UPDATE_TIMESHEET_ROW';
+// const DELETE_TIMESHEET_ROW = 'DELETE_TIMESHEET_ROW';
+// const UPDATE_TIMESHEET_ROW = 'UPDATE_TIMESHEET_ROW';
 
 /* actions */
 export const addTimesheetRowCount = () => ({
