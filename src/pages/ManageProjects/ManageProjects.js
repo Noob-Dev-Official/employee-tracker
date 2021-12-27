@@ -1,22 +1,30 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import Layout from '../../components/Utilities/Layout';
 import { GeneralButton } from '../../components/Utilities/ExportedStylings';
 import ProjectTableRows from '../../components/Project/ProjectTableRows';
 import SubTitle from '../../components/Utilities/SubTitle';
+import AddProject from '../../components/Project/AddProject/AddProject';
 
 import './ManageProjects.scss';
 
 const ManageProjects = () => {
+	const [showModalForm, setShowModalForm] = useState(false);
+
+	const onAddProjectBtnClick = () => {
+		setShowModalForm((prev) => !prev);
+	};
+
 	return (
 		<>
 			<Layout>
 				<div className='heading'>
 					<SubTitle>Manage Projects</SubTitle>
 				</div>
-				<div className='add-project-btn'>
-					<GeneralButton>Add Projects</GeneralButton>
+				<div className='add-project-btn' onClick={onAddProjectBtnClick}>
+					<GeneralButton>Add Project</GeneralButton>
 				</div>
+				{showModalForm && <AddProject />}
 				<div className='project-table'>
 					<div className='table-heading'>
 						<div className='number-col'>
