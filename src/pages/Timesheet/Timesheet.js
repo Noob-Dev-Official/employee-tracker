@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 
 // const { datesGenerator } = require('dates-generator');
 
-import Layout from '../../components/Layout';
-import SubTitle from '../../components/SubTitle';
-import { GeneralButton } from '../../components/global/ExportedStylings';
-import TimesheetRow from '../../components/TimesheetRow';
+import Layout from '../../components/Utilities/Layout';
+import SubTitle from '../../components/Utilities/SubTitle';
+import { GeneralButton } from '../../components/Utilities/ExportedStylings';
+import TimesheetRow from '../../components/Timesheet/TimesheetRow/TimesheetRow';
 
 import './Timesheet.scss';
 

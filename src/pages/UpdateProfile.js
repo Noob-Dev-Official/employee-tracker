@@ -3,7 +3,7 @@ import React, { useState, useRef } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 
 import { useAuth } from '../contexts/AuthContext';
-import Alert from '../components/Alert';
+import Alert from '../components/Utilities/Alert';
 import {
 	AuthFormParent,
 	AuthFormHeading,
@@ -14,7 +14,7 @@ import {
 	AuthFormPasswordDiv,
 	AuthFormSubmitBtn,
 	AuthFormBottomText,
-} from '../components/AuthFormComponents';
+} from '../components/FirebaseAuth/AuthFormComponents';
 
 const UpdateProfile = () => {
 	const [email, setEmail] = useState({ email: '' });

@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import { useAuth } from '../contexts/AuthContext';
-import Alert from '../components/Alert';
+import Alert from '../components/Utilities/Alert';
 import {
 	AuthFormParent,
 	AuthFormHeading,
@@ -13,8 +13,8 @@ import {
 	AuthFormEmailDiv,
 	AuthFormSubmitBtn,
 	AuthFormBottomText,
-} from '../components/AuthFormComponents';
-import Success from '../components/Success';
+} from '../components/FirebaseAuth/AuthFormComponents';
+import Success from '../components/Utilities/Success';
 
 const ForgotPassword = () => {
 	const [email, setEmail] = useState({ email: '' });

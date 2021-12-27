@@ -3,8 +3,8 @@ import React, { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 
 import { useAuth } from '../contexts/AuthContext';
-import Alert from '../components/Alert';
-import Success from '../components/Success';
+import Alert from '../components/Utilities/Alert';
+import Success from '../components/Utilities/Success';
 import {
 	AuthFormParent,
 	AuthFormHeading,
@@ -14,7 +14,7 @@ import {
 	AuthFormEmailDiv,
 	AuthFormPasswordDiv,
 	AuthFormSubmitBtn,
-} from '../components/AuthFormComponents';
+} from '../components/FirebaseAuth/AuthFormComponents';
 
 const SignUp = () => {
 	const [email, setEmail] = useState({ email: '' });

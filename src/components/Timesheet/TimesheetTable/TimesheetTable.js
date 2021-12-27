@@ -2,8 +2,12 @@ import React from 'react';
 
 import styled from 'styled-components';
 
-import { Table, TableHead, TableBody } from './Utils';
-import TimesheetTableRow from './TimesheetTableRow';
+import {
+	Table,
+	TableHead,
+	TableBody,
+} from '../../Utilities/TimesheetTableUtils';
+import TimesheetTableRow from '../TimesheetTableRow/TimesheetTableRow';
 
 const TimesheetTableParent = styled.div`
 	display: flex;

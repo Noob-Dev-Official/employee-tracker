@@ -3,14 +3,16 @@ import { v4 as uuidV4 } from 'uuid';
 
 /* state */
 const initialState = {
-	projects: {
-		id: '',
-		name: '',
-		date_started: '',
-		no_of_emp: '',
-		address: '',
-		completed: false,
-	},
+	projects: [
+		{
+			id: '',
+			name: '',
+			date_started: '',
+			no_of_emp: '',
+			address: '',
+			completed: false,
+		},
+	],
 	projects_count: {
 		num: 0,
 	},

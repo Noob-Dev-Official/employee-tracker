@@ -2,7 +2,7 @@ import React from 'react';
 
 import styled from 'styled-components';
 
-import Navbar from './Navbar';
+import Navbar from '../Navbar/Navbar';
 
 const LayoutDiv = styled.div`
 	margin: 0px 150px;

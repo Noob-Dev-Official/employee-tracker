@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 // eslint-disable-next-line
-import Alert from '../../components/Alert';
+import Alert from '../../components/Utilities/Alert';
 import { useAuth } from '../../contexts/AuthContext';
-import Layout from '../../components/Layout';
-import Card from '../../components/Card';
+import Layout from '../../components/Utilities/Layout';
+import Card from '../../components/Utilities/Card';
 import ToolsIcon from '../../svg/ToolsIcon';
 import SettingsIcon from '../../svg/SettingsIcon';
 
 import './Home.scss';
-import { IconButton } from '../../components/global/ExportedStylings';
+import { IconButton } from '../../components/Utilities/ExportedStylings';
 
 const Home = () => {
 	// eslint-disable-next-line

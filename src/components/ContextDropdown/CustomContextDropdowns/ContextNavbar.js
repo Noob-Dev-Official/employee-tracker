@@ -4,7 +4,7 @@ import { useHistory } from 'react-router-dom';
 
 import { useAuth } from '../../../contexts/AuthContext';
 
-import { IconButton } from '../../global/ExportedStylings';
+import { IconButton } from '../../Utilities/ExportedStylings';
 import LogoutIcon from '../../../svg/LogoutIcon';
 import AccountIcon from '../../../svg/AccountIcon';
 import {

@@ -4,7 +4,7 @@ import Home from './pages/Home/Home';
 import SignUp from './pages/SignUp';
 import SignIn from './pages/SignIn';
 import { AuthProvider } from './contexts/AuthContext';
-import PrivateRoute from './components/PrivateRoute';
+import PrivateRoute from './components/Utilities/PrivateRoute';
 import ForgotPassword from './pages/ForgotPassword';
 import UpdateProfile from './pages/UpdateProfile';
 import ManageEmployees from './pages/ManageEmployees/ManageEmployees';

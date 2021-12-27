@@ -1,9 +1,9 @@
 import React from 'react';
 
-import Layout from '../../components/Layout';
-import { GeneralButton } from '../../components/global/ExportedStylings';
-import ProjectTableRows from '../../components/ProjectTableRows';
-import SubTitle from '../../components/SubTitle';
+import Layout from '../../components/Utilities/Layout';
+import { GeneralButton } from '../../components/Utilities/ExportedStylings';
+import ProjectTableRows from '../../components/Project/ProjectTableRows';
+import SubTitle from '../../components/Utilities/SubTitle';
 
 import './ManageProjects.scss';
 

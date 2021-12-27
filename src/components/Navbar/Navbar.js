@@ -2,14 +2,14 @@ import React from 'react';
 
 import styled from 'styled-components';
 
-import MenuDownArrowIcon from '../svg/MenuDownArrowIcon';
-import HomeIcon from '../svg/HomeIcon';
+import MenuDownArrowIcon from '../../svg/MenuDownArrowIcon';
+import HomeIcon from '../../svg/HomeIcon';
 // import RoundIcon from './RoundIcon';
-import { IconButton } from './global/ExportedStylings';
+import { IconButton } from '../Utilities/ExportedStylings';
 // import DropdownMenu from './DropdownMenu';
 import { Link } from 'react-router-dom';
-import ContextDropdown from './ContextDropdown/ContextDropdown';
-import ContextNavbar from './ContextDropdown/CustomContextDropdowns/ContextNavbar';
+import ContextDropdown from '../ContextDropdown/ContextDropdown';
+import ContextNavbar from '../ContextDropdown/CustomContextDropdowns/ContextNavbar';
 
 const NavbarParent = styled.nav`
 	display: flex;

@@ -3,10 +3,10 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 // import Select from 'react-select';
 
-import DownArrowIcon from '../svg/DownArrowIcon';
-import { IconButton } from './global/ExportedStylings';
+import DownArrowIcon from '../../../svg/DownArrowIcon';
+import { IconButton } from '../../Utilities/ExportedStylings';
 // import TimesheetTable from './TimesheetTable';
-import DemoTimesheetTable from './DemoTimesheetTable';
+import DemoTimesheetTable from '../TimesheetTable/DemoTimesheetTable';
 // import { ReactSelect } from './Utils';
 
 const TimesheetRowParent = styled.div`

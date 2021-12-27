@@ -4,7 +4,7 @@ import {
 	ContextItemWrapper,
 } from '../ContextStylings';
 
-import { IconButton } from '../../global/ExportedStylings';
+import { IconButton } from '../../Utilities/ExportedStylings';
 
 //* Components
 

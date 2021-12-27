@@ -3,9 +3,9 @@ import React from 'react';
 import styled from 'styled-components';
 
 // import TableButton from './TableButton';
-import ContextDropdown from '../components/ContextDropdown/ContextDropdown';
-import ContextProjectTableRows from '../components/ContextDropdown/CustomContextDropdowns/ContextProjectTableRows';
-import VerticalDots from '../svg/VerticalDots';
+import ContextDropdown from '../ContextDropdown/ContextDropdown';
+import ContextProjectTableRows from '../ContextDropdown/CustomContextDropdowns/ContextProjectTableRows';
+import VerticalDots from '../../svg/VerticalDots';
 
 const ProjectTableRowsParent = styled.div`
 	display: flex;

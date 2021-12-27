@@ -3,7 +3,11 @@ import React, { useState, useEffect } from 'react';
 // import { v4 as uuidV4 } from 'uuid';
 // import { useDispatch, useSelector } from 'react-redux';
 
-import { TableBodyRow, Input, Select } from './DemoTableComponents';
+import {
+	TableBodyRow,
+	Input,
+	Select,
+} from '../TableComponents/DemoTableComponents';
 
 const days = [
 	{ label: 1, value: 1 },

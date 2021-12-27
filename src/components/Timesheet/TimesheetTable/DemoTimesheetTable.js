@@ -6,10 +6,14 @@ import { useDispatch, useSelector } from 'react-redux';
 import { v4 as uuidV4 } from 'uuid';
 
 // import { addTimesheetTableRowCount } from '../redux/ducks/Timesheet';
-import { addTimesheet } from '../redux/ducks/TimesheetRow';
-import DemoTimesheetTableRow from './DemoTimesheetTableRow';
-import { Table, TableHead, TableBody } from './DemoTableComponents';
-import { SmallTableButton } from './global/ExportedStylings';
+import { addTimesheet } from '../../../redux/ducks/TimesheetRow';
+import DemoTimesheetTableRow from '../TimesheetTableRow/DemoTimesheetTableRow';
+import {
+	Table,
+	TableHead,
+	TableBody,
+} from '../TableComponents/DemoTableComponents';
+import { SmallTableButton } from '../../Utilities/ExportedStylings';
 
 const TimesheetTableParentDiv = styled.div`
 	display: flex;

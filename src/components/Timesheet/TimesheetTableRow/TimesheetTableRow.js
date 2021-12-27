@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-import { TableBodyRow, Input } from './Utils';
+import { TableBodyRow, Input } from '../../Utilities/TimesheetTableUtils';
 
 const TimesheetTableRow = (props) => {
 	const { day } = props;

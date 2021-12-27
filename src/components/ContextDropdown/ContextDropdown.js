@@ -6,7 +6,7 @@ import {
 	ContextParentContainer,
 	ContextPortalContainer,
 } from './ContextStylings';
-import { IconButton } from '../global/ExportedStylings';
+import { IconButton } from '../Utilities/ExportedStylings';
 
 const ContextDropdown = (props) => {
 	const {

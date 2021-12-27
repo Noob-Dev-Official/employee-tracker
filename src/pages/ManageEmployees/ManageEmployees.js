@@ -1,8 +1,8 @@
 import React from 'react';
 
-import Layout from '../../components/Layout';
-import { GeneralButton } from '../../components/global/ExportedStylings';
-import EmployeeListTableRows from '../../components/EmployeeListTableRows';
+import Layout from '../../components/Utilities/Layout';
+import { GeneralButton } from '../../components/Utilities/ExportedStylings';
+import EmployeeListTableRows from '../../components/Employee/EmployeeListTableRows';
 
 import './ManageEmployees.scss';
 

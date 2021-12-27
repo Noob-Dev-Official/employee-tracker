@@ -2,10 +2,10 @@ import React from 'react';
 
 import { Link } from 'react-router-dom';
 
-import Layout from '../../components/Layout';
-import SubTitle from '../../components/SubTitle';
-import { GeneralButton } from '../../components/global/ExportedStylings';
-import Card from '../../components/Card';
+import Layout from '../../components/Utilities/Layout';
+import SubTitle from '../../components/Utilities/SubTitle';
+import { GeneralButton } from '../../components/Utilities/ExportedStylings';
+import Card from '../../components/Utilities/Card';
 
 import './Timesheets.scss';
 // import {

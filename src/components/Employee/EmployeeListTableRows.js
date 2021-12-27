@@ -1,12 +1,12 @@
 import React from 'react';
 
 import styled from 'styled-components';
-import ContextDropdown from './ContextDropdown/ContextDropdown';
+import ContextDropdown from '../ContextDropdown/ContextDropdown';
 
-import TableButton from './TableButton';
+import TableButton from '../Utilities/TableButton';
 
-import VerticalDots from '../svg/VerticalDots';
-import ContextEmployeeTableRows from './ContextDropdown/CustomContextDropdowns/ContextEmployeeTableRows';
+import VerticalDots from '../../svg/VerticalDots';
+import ContextEmployeeTableRows from '../ContextDropdown/CustomContextDropdowns/ContextEmployeeTableRows';
 
 const EmployeeListTableRowsParent = styled.div`
 	display: flex;
