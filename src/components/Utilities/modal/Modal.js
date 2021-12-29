@@ -21,6 +21,7 @@ export const ModalContent = styled.div`
 	flex-direction: column;
 	border-radius: 15px;
 	padding: 10px;
+	margin: 10px 20px;
 `;
 
 export const ModalClose = styled.div`
