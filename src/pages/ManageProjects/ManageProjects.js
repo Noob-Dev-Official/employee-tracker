@@ -29,9 +29,7 @@ const ManageProjects = () => {
 					<GeneralButton>Add Project</GeneralButton>
 				</div>
 				{showModalForm && (
-					<AddProject
-						onProjectFormCloseBtnClick={onProjectFormCloseBtnClick}
-					/>
+					<AddProject onModalCloseBtnClick={onProjectFormCloseBtnClick} />
 				)}
 				<div className='project-table'>
 					<div className='table-heading'>
