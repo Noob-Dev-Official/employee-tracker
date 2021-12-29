@@ -11,15 +11,32 @@ export const Modal = styled.div`
 	align-items: center;
 	justify-content: center;
 	z-index: 10;
+	flex-direction: column;
 `;
 
 export const ModalContent = styled.div`
 	width: 500px;
 	background-color: #fff;
+	display: flex;
+	flex-direction: column;
+	border-radius: 15px;
+	padding: 10px;
+`;
+
+export const ModalClose = styled.div`
+	margin: 10px 10px;
+	align-self: flex-end;
+
+	&:hover {
+		cursor: pointer;
+	}
 `;
 
 export const ModalTitle = styled.div`
-	margin: 0;
+	margin: 10px 20px;
+	color: #0f4c75;
 `;
 
-export const ModalBody = styled.div``;
+export const ModalBody = styled.div`
+	margin: 10px 20px;
+`;

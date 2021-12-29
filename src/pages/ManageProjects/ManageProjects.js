@@ -15,6 +15,10 @@ const ManageProjects = () => {
 		setShowModalForm((prev) => !prev);
 	};
 
+	const onProjectFormCloseBtnClick = () => {
+		setShowModalForm((prev) => !prev);
+	};
+
 	return (
 		<>
 			<Layout>
@@ -24,7 +28,11 @@ const ManageProjects = () => {
 				<div className='add-project-btn' onClick={onAddProjectBtnClick}>
 					<GeneralButton>Add Project</GeneralButton>
 				</div>
-				{showModalForm && <AddProject />}
+				{showModalForm && (
+					<AddProject
+						onProjectFormCloseBtnClick={onProjectFormCloseBtnClick}
+					/>
+				)}
 				<div className='project-table'>
 					<div className='table-heading'>
 						<div className='number-col'>

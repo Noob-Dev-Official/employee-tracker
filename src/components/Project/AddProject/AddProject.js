@@ -5,15 +5,22 @@ import {
 	ModalTitle,
 	ModalBody,
 	ModalContent,
+	ModalClose,
 } from '../../Utilities/modal/Modal';
+import CrossIcon from '../../../svg/CrossIcon';
 
-export default function () {
+const AddProject = (props) => {
+	const { onProjectFormCloseBtnClick } = props;
+
 	return (
 		<>
-			<Modal>
-				<ModalContent>
+			<Modal onClick={onProjectFormCloseBtnClick}>
+				<ModalContent onClick={(e) => e.stopPropagation()}>
+					<ModalClose onClick={onProjectFormCloseBtnClick}>
+						<CrossIcon />
+					</ModalClose>
 					<ModalTitle>
-						<h2>hello</h2>
+						<h2>Add Project</h2>
 					</ModalTitle>
 					<ModalBody>
 						<p>bye</p>
@@ -22,4 +29,6 @@ export default function () {
 			</Modal>
 		</>
 	);
-}
+};
+
+export default AddProject;
