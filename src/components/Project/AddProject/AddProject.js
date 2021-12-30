@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 
+import { addProject } from '../../../redux/ducks/Projects';
 import { ModalTitle, ModalBody } from '../../Utilities/modal/Modal';
 import ModalContainer from '../../Utilities/modal/ModalContainer';
-
 import {
 	Form,
 	FormLabel,

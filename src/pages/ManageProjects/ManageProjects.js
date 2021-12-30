@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+import { useDispatch, useSelector } from 'react-redux';
+
 import Layout from '../../components/Utilities/Layout';
 import { GeneralButton } from '../../components/Utilities/ExportedStylings';
 import ProjectTableRows from '../../components/Project/ProjectTableRows';
@@ -9,6 +11,8 @@ import AddProject from '../../components/Project/AddProject/AddProject';
 import './ManageProjects.scss';
 
 const ManageProjects = () => {
+	const projectsData = useSelector((state) => state.projects.projects);
+
 	const [showModalForm, setShowModalForm] = useState(false);
 
 	const onAddProjectBtnClick = () => {
@@ -47,16 +51,20 @@ const ManageProjects = () => {
 						</div>
 					</div>
 					<div className='table-data'>
+						{projectsData.map((data, index) => {
+							return (
+								<ProjectTableRows
+									number={1}
+									projectName='123 Bryant Avessssssssasdfasdf'
+									description='lorem ispum donor'
+									address='123 Bryant Ave'
+								/>
+							);
+						})}
 						<ProjectTableRows
 							number={1}
 							projectName='123 Bryant Avessssssssasdfasdf'
 							description='lorem ispum donor'
-							address='123 Bryant Ave'
-						/>
-						<ProjectTableRows
-							number={100}
-							projectName='21 Ilford Avess'
-							description='lorem ispum donor donor dorner'
 							address='123 Bryant Ave'
 						/>
 					</div>

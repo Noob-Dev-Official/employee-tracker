@@ -3,7 +3,7 @@ import { v4 as uuidV4 } from 'uuid';
 
 /* state */
 const initialState = {
-	projects: [
+	projects_template: [
 		{
 			id: '',
 			name: '',
@@ -13,28 +13,60 @@ const initialState = {
 			completed: false,
 		},
 	],
-	projects_count: {
-		num: 0,
-	},
+	projects: [],
 };
 
-/* increment project count */
-const ADD_PROJECTS_COUNT = 'ADD_PROJECTS_COUNT';
+/* add project */
+const ADD_PROJECT = 'ADD_PROJECT';
 
 /* actions */
-export const addProjectCount = () => ({
-	type: ADD_PROJECTS_COUNT,
+export const addProject = (
+	id,
+	name,
+	numberOfEmployees,
+	address,
+	description,
+	completed,
+	dateStarted,
+) => ({
+	type: ADD_PROJECT,
+	id,
+	name,
+	numberOfEmployees,
+	address,
+	description,
+	completed,
+	dateStarted,
 });
 
 /* reducer */
 const projectsReducer = (state = initialState, action) => {
 	switch (action.type) {
-		case ADD_PROJECTS_COUNT: {
+		case ADD_PROJECT: {
+			const {
+				id,
+				name,
+				numberOfEmployees,
+				address,
+				description,
+				dataStarted,
+				completed,
+			} = action;
+
 			return {
 				...state,
-				projects_count: {
-					num: state.projects_count.num + 1,
-				},
+				projects: [
+					state.projects,
+					{
+						id: id,
+						name: name,
+						date_started: dataStarted,
+						description: description,
+						no_of_emp: numberOfEmployees,
+						address: address,
+						completed: completed,
+					},
+				],
 			};
 		}
 		default:
