@@ -20,7 +20,7 @@ export const ModalContent = styled.div`
 	display: flex;
 	flex-direction: column;
 	border-radius: 15px;
-	padding: 10px;
+	padding: 30px 20px;
 	margin: 10px 20px;
 `;
 
