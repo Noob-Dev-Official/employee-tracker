@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 
-export const Form = styled.form``;
+export const Form = styled.form`
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+`;
 
 export const FormInputDiv = styled.div`
 	display: flex;

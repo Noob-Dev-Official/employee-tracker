@@ -1,6 +1,7 @@
 import React from 'react';
 
-import { Modal, ModalContent } from './Modal';
+import { Modal, ModalContent, ModalClose } from './Modal';
+import CrossIcon from '../../../svg/CrossIcon';
 
 const ModalContainer = (props) => {
 	const { children, onModalCloseBtnClick } = props;
@@ -8,7 +9,12 @@ const ModalContainer = (props) => {
 	return (
 		<>
 			<Modal onClick={onModalCloseBtnClick}>
-				<ModalContent>{children}</ModalContent>
+				<ModalContent onClick={(e) => e.stopPropagation()}>
+					<ModalClose onClick={onModalCloseBtnClick}>
+						<CrossIcon />
+					</ModalClose>
+					{children}
+				</ModalContent>
 			</Modal>
 		</>
 	);
