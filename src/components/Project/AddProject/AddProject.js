@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+import { useDispatch } from 'react-redux';
+
 import { addProject } from '../../../redux/ducks/Projects';
 import { ModalTitle, ModalBody } from '../../Utilities/modal/Modal';
 import ModalContainer from '../../Utilities/modal/ModalContainer';
@@ -13,7 +15,20 @@ import {
 } from '../../Utilities/general-form/FormComponents';
 
 const AddProject = (props) => {
-	const { onModalCloseBtnClick } = props;
+	const {
+		onModalCloseBtnClick,
+		setShowModalForm,
+		// projectName,
+		// setProjectName,
+		// projectDescription,
+		// setProjectDescription,
+		// projectAddress,
+		// setProjectAddress,
+	} = props;
+
+	const date = new Date();
+
+	const dispatch = useDispatch();
 
 	const [projectName, setProjectName] = useState({ projectName: '' });
 	const [projectDescription, setProjectDescription] = useState({
@@ -47,6 +62,23 @@ const AddProject = (props) => {
 		});
 	};
 
+	const onFormSubmit = (e) => {
+		e.preventDefault();
+
+		dispatch(
+			addProject(
+				projectName.projectName,
+				0,
+				projectAddress.projectAddress,
+				projectDescription.projectDescription,
+				false,
+				date.getDate(),
+			),
+		);
+
+		setShowModalForm((prev) => !prev);
+	};
+
 	return (
 		<>
 			<ModalContainer onModalCloseBtnClick={onModalCloseBtnClick}>
@@ -54,7 +86,7 @@ const AddProject = (props) => {
 					<h2>Add Project</h2>
 				</ModalTitle>
 				<ModalBody>
-					<Form>
+					<Form onSubmit={onFormSubmit}>
 						<FormInputDiv>
 							<FormLabel>ProjectName</FormLabel>
 							<FormInput

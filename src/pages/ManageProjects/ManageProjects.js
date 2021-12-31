@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 
 import Layout from '../../components/Utilities/Layout';
 import { GeneralButton } from '../../components/Utilities/ExportedStylings';
@@ -12,6 +12,8 @@ import './ManageProjects.scss';
 
 const ManageProjects = () => {
 	const projectsData = useSelector((state) => state.projects.projects);
+
+	console.log(projectsData);
 
 	const [showModalForm, setShowModalForm] = useState(false);
 
@@ -33,7 +35,16 @@ const ManageProjects = () => {
 					<GeneralButton>Add Project</GeneralButton>
 				</div>
 				{showModalForm && (
-					<AddProject onModalCloseBtnClick={onProjectFormCloseBtnClick} />
+					<AddProject
+						onModalCloseBtnClick={onProjectFormCloseBtnClick}
+						setShowModalForm={setShowModalForm}
+						// projectName={projectName}
+						// setProjectName={setProjectName}
+						// projectDescription={projectDescription}
+						// setProjectDescription={setProjectDescription}
+						// projectAddress={projectAddress}
+						// setProjectAddress={setProjectAddress}
+					/>
 				)}
 				<div className='project-table'>
 					<div className='table-heading'>
@@ -54,19 +65,20 @@ const ManageProjects = () => {
 						{projectsData.map((data, index) => {
 							return (
 								<ProjectTableRows
-									number={1}
-									projectName='123 Bryant Avessssssssasdfasdf'
-									description='lorem ispum donor'
-									address='123 Bryant Ave'
+									key={data.id}
+									number={index}
+									projectName={data.name}
+									description={data.description}
+									address={data.address}
 								/>
 							);
 						})}
-						<ProjectTableRows
+						{/* <ProjectTableRows
 							number={1}
 							projectName='123 Bryant Avessssssssasdfasdf'
 							description='lorem ispum donor'
 							address='123 Bryant Ave'
-						/>
+						/> */}
 					</div>
 				</div>
 			</Layout>

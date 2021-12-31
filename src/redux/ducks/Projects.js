@@ -21,7 +21,6 @@ const ADD_PROJECT = 'ADD_PROJECT';
 
 /* actions */
 export const addProject = (
-	id,
 	name,
 	numberOfEmployees,
 	address,
@@ -30,7 +29,7 @@ export const addProject = (
 	dateStarted,
 ) => ({
 	type: ADD_PROJECT,
-	id,
+	id: uuidV4(),
 	name,
 	numberOfEmployees,
 	address,
@@ -56,7 +55,7 @@ const projectsReducer = (state = initialState, action) => {
 			return {
 				...state,
 				projects: [
-					state.projects,
+					...state.projects,
 					{
 						id: id,
 						name: name,
