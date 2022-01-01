@@ -14,7 +14,7 @@ export const FormInputDiv = styled.div`
 export const FormLabel = styled.label``;
 
 export const FormInput = styled.input`
-	padding: 5px 10px;
+	padding: 8px 10px;
 	margin-top: 5px;
 `;
 
