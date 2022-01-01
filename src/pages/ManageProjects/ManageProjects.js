@@ -13,8 +13,6 @@ import './ManageProjects.scss';
 const ManageProjects = () => {
 	const projectsData = useSelector((state) => state.projects.projects);
 
-	console.log(projectsData);
-
 	const [showModalForm, setShowModalForm] = useState(false);
 
 	const onAddProjectBtnClick = () => {

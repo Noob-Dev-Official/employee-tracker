@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+
 // eslint-disable-next-line
 import Alert from '../../components/Utilities/Alert';
 import { useAuth } from '../../contexts/AuthContext';
@@ -12,6 +14,8 @@ import './Home.scss';
 import { IconButton } from '../../components/Utilities/ExportedStylings';
 
 const Home = () => {
+	const projectsData = useSelector((state) => state.projects.projects);
+
 	// eslint-disable-next-line
 	const [error, setError] = useState(false);
 	// eslint-disable-next-line
@@ -57,78 +61,21 @@ const Home = () => {
 				<section className='projects-section'>
 					<h3 className='title'>Projects</h3>
 					<div className='projects'>
-						<Card>
-							<Link to='/'>
-								<h4 className='project-name'>123 Bryan Ave</h4>
-								<p className='num-of-employees'>Emp No: 16 employees</p>
-								<p className='description'>
-									Description: Lorem Ispum Donor
-								</p>
-							</Link>
-						</Card>
-						<Card>
-							<Link to='/'>
-								<h4 className='project-name'>123 Bryan Ave</h4>
-								<p className='num-of-employees'>Emp No: 16 employees</p>
-								<p className='description'>
-									Description: Lorem Ispum Donor
-								</p>
-							</Link>
-						</Card>
-						<Card>
-							<Link to='/'>
-								<h4 className='project-name'>123 Bryan Ave</h4>
-								<p className='num-of-employees'>Emp No: 16 employees</p>
-								<p className='description'>
-									Description: Lorem Ispum Donor
-								</p>
-							</Link>
-						</Card>
-						<Card>
-							<Link to='/'>
-								<h4 className='project-name'>123 Bryan Ave</h4>
-								<p className='num-of-employees'>Emp No: 16 employees</p>
-								<p className='description'>
-									Description: Lorem Ispum Donor
-								</p>
-							</Link>
-						</Card>
-						<Card>
-							<Link to='/'>
-								<h4 className='project-name'>123 Bryan Ave</h4>
-								<p className='num-of-employees'>Emp No: 16 employees</p>
-								<p className='description'>
-									Description: Lorem Ispum Donor
-								</p>
-							</Link>
-						</Card>
-						<Card>
-							<Link to='/'>
-								<h4 className='project-name'>123 Bryan Ave</h4>
-								<p className='num-of-employees'>Emp No: 16 employees</p>
-								<p className='description'>
-									Description: Lorem Ispum Donor
-								</p>
-							</Link>
-						</Card>
-						<Card>
-							<Link to='/'>
-								<h4 className='project-name'>123 Bryan Ave</h4>
-								<p className='num-of-employees'>Emp No: 16 employees</p>
-								<p className='description'>
-									Description: Lorem Ispum Donor
-								</p>
-							</Link>
-						</Card>
-						<Card>
-							<Link to='/'>
-								<h4 className='project-name'>123 Bryan Ave</h4>
-								<p className='num-of-employees'>Emp No: 16 employees</p>
-								<p className='description'>
-									Description: Lorem Ispum Donor
-								</p>
-							</Link>
-						</Card>
+						{projectsData.map((data, index) => {
+							return (
+								<Card key={data.id}>
+									<Link to='/timesheets'>
+										<h4 className='project-name'>{data.name}</h4>
+										<p className='num-of-employees'>
+											Emp No: {data.no_of_emp}
+										</p>
+										<p className='description'>
+											Description: {data.description}
+										</p>
+									</Link>
+								</Card>
+							);
+						})}
 					</div>
 				</section>
 			</Layout>
