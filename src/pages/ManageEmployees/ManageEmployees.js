@@ -50,12 +50,13 @@ const ManageEmployees = () => {
 						{employeesData.map((data, index) => {
 							return (
 								<EmployeeListTableRows
+									key={data.id}
 									number={index}
 									employeeName={data.name}
 								/>
 							);
 						})}
-						{/* <EmployeeListTableRows number={1} employeeName='Hisham' /> */}
+						{employeesData.length === 0 && <p>No employees</p>}
 					</div>
 				</div>
 			</Layout>

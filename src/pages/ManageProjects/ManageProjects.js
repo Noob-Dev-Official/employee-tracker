@@ -65,12 +65,7 @@ const ManageProjects = () => {
 								/>
 							);
 						})}
-						{/* <ProjectTableRows
-							number={1}
-							projectName='123 Bryant Avessssssssasdfasdf'
-							description='lorem ispum donor'
-							address='123 Bryant Ave'
-						/> */}
+						{projectsData.length === 0 && <p>No projects</p>}
 					</div>
 				</div>
 			</Layout>
