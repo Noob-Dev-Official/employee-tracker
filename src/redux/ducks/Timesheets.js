@@ -3,35 +3,47 @@ import { v4 as uuidV4 } from 'uuid';
 
 /* state */
 const initialState = {
-	timesheets: {
-		id: 0,
-		name: '',
-		project_id: '',
-		date_from: '',
-		date_to: '',
-	},
-	timesheets_count: {
-		num: 0,
-	},
+	timesheets_template: [
+		{
+			id: 0,
+			name: '',
+			project_id: '',
+			date_from: '',
+			date_to: '',
+		},
+	],
+	timesheets: [],
 };
 
 /* increment timesheets count */
-const ADD_TIMESHEETS_COUNT = 'ADD_TIMESHEETS_COUNT';
+const ADD_TIMESHEETS = 'ADD_TIMESHEETS';
 
 /* actions */
-export const addTimesheetsCount = () => ({
-	type: ADD_TIMESHEETS_COUNT,
+export const addTimesheets = (name, date_from, date_to) => ({
+	type: ADD_TIMESHEETS,
+	id: uuidV4(),
+	date_from,
+	date_to,
+	name,
 });
 
 /* reducer */
 const timesheetsReducer = (state = initialState, action) => {
 	switch (action.type) {
-		case ADD_TIMESHEETS_COUNT: {
+		case ADD_TIMESHEETS: {
+			const { name, date_from, date_to, id } = action;
+
 			return {
 				...state,
-				timesheets_count: {
-					num: state.timesheets_count.num + 1,
-				},
+				projects: [
+					...state.projects,
+					{
+						id: id,
+						name: name,
+						date_from: date_from,
+						date_to: date_to,
+					},
+				],
 			};
 		}
 		default:

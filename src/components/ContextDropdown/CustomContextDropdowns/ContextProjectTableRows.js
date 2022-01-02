@@ -17,13 +17,17 @@ import EditIcon from '../../../svg/EditIcon';
 import TrashIcon from '../../../svg/TrashIcon';
 import CornerUpRight from '../../../svg/CornerUpRight';
 
-const ContextProjectTableRows = ({ handleOnEdit, handleOnDelete }) => {
+const ContextProjectTableRows = ({
+	handleOnEdit,
+	handleOnDelete,
+	projectID,
+}) => {
 	const countref = useRef(0); // remove this
 	console.log('ContextProjectTableRows.js: ' + countref.current++); // remove this
 
 	return (
 		<ContextDropdownContainer>
-			<ContextItemWrapperLink to='/timesheets'>
+			<ContextItemWrapperLink to={`/timesheets/${projectID}`}>
 				<IconButton width='30px' height='30px' margin='0 5px 0 0'>
 					<CornerUpRight />
 				</IconButton>

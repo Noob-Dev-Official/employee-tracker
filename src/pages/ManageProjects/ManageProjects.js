@@ -55,9 +55,10 @@ const ManageProjects = () => {
 					</div>
 					<div className='table-data'>
 						{projectsData.map((data, index) => {
+							console.log(data.id);
 							return (
 								<ProjectTableRows
-									key={data.id}
+									projectID={data.id}
 									number={index}
 									projectName={data.name}
 									description={data.description}
@@ -65,7 +66,14 @@ const ManageProjects = () => {
 								/>
 							);
 						})}
-						{projectsData.length === 0 && <p>No projects</p>}
+						{/* {projectsData.length === 0 && <p>No projects</p>} */}
+						<ProjectTableRows
+							key={123}
+							number={'12312'}
+							projectName={'data.name'}
+							description={'data.description'}
+							address={'data.address'}
+						/>
 					</div>
 				</div>
 			</Layout>

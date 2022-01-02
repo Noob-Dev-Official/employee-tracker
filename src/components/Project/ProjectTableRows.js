@@ -65,7 +65,7 @@ const ProjectTableRowsParent = styled.div`
 `;
 
 const ProjectTableRows = (props) => {
-	const { number, projectName, description, address } = props;
+	const { number, projectName, description, address, projectID } = props;
 	function handleOnEdit() {}
 
 	function handleOnDelete() {}
@@ -86,12 +86,7 @@ const ProjectTableRows = (props) => {
 						<p>{address}</p>
 					</div>
 				</div>
-				{/* Useless due to width */}
-				{/* <div className='buttons'>
-                    <TableButton text='Timesheets' linkTo='/timesheets' />
-                    <TableButton text='Edit' />
-                    <TableButton text='Del' isDel />
-                </div> */}
+
 				<div className='dropdown-buttons'>
 					<ContextDropdown
 						icon={<VerticalDots />}
@@ -99,6 +94,7 @@ const ProjectTableRows = (props) => {
 						padding='7px'
 					>
 						<ContextProjectTableRows
+							projectID={projectID}
 							handleOnEdit={handleOnEdit}
 							handleOnDelete={handleOnDelete}
 						/>

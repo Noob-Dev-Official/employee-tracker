@@ -40,12 +40,12 @@ function App() {
 								/>
 								<PrivateRoute
 									exact
-									path='/timesheets'
+									path='/timesheets/:projectID'
 									component={Timesheets}
 								/>
 								<PrivateRoute
 									exact
-									path='/timesheet'
+									path='/timesheet/:timesheetsID'
 									component={Timesheet}
 								/>
 								<Route exact path='/sign-in'>
