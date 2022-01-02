@@ -1,21 +1,42 @@
-import React from 'react';
+import React, { useState } from 'react';
+
+import { useSelector } from 'react-redux';
 
 import Layout from '../../components/Utilities/Layout';
 import { GeneralButton } from '../../components/Utilities/ExportedStylings';
 import EmployeeListTableRows from '../../components/Employee/EmployeeListTableRows';
+import AddEmployee from '../../components/Employee/AddEmployee/AddEmployee';
 
 import './ManageEmployees.scss';
 
 const ManageEmployees = () => {
+	const employeesData = useSelector((state) => state.employees.employees);
+
+	const [showModalForm, setShowModalForm] = useState(false);
+
+	const onAddEmployeeBtnClick = () => {
+		setShowModalForm((prev) => !prev);
+	};
+
+	const onEmployeeFormCloseBtnClick = () => {
+		setShowModalForm((prev) => !prev);
+	};
+
 	return (
 		<>
 			<Layout>
 				<div className='heading'>
 					<h3>Manage Employees</h3>
 				</div>
-				<div className='add-emp-btn'>
+				<div className='add-emp-btn' onClick={onAddEmployeeBtnClick}>
 					<GeneralButton>Add Employees</GeneralButton>
 				</div>
+				{showModalForm && (
+					<AddEmployee
+						onModalCloseBtnClick={onEmployeeFormCloseBtnClick}
+						setShowModalForm={setShowModalForm}
+					/>
+				)}
 				<div className='employee-table'>
 					<div className='table-heading'>
 						<div className='number-col'>
@@ -26,11 +47,15 @@ const ManageEmployees = () => {
 						</div>
 					</div>
 					<div className='table-data'>
-						<EmployeeListTableRows number={1} employeeName='Hisham' />
-						<EmployeeListTableRows number={2} employeeName='Max' />
-						<EmployeeListTableRows number={3} employeeName='John' />
-						<EmployeeListTableRows number={4} employeeName='Ahmed' />
-						<EmployeeListTableRows number={4} employeeName='Ahmed' />
+						{employeesData.map((data, index) => {
+							return (
+								<EmployeeListTableRows
+									number={index}
+									employeeName={data.name}
+								/>
+							);
+						})}
+						{/* <EmployeeListTableRows number={1} employeeName='Hisham' /> */}
 					</div>
 				</div>
 			</Layout>

@@ -36,12 +36,6 @@ const ManageProjects = () => {
 					<AddProject
 						onModalCloseBtnClick={onProjectFormCloseBtnClick}
 						setShowModalForm={setShowModalForm}
-						// projectName={projectName}
-						// setProjectName={setProjectName}
-						// projectDescription={projectDescription}
-						// setProjectDescription={setProjectDescription}
-						// projectAddress={projectAddress}
-						// setProjectAddress={setProjectAddress}
 					/>
 				)}
 				<div className='project-table'>

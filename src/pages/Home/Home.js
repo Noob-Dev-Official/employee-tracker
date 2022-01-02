@@ -76,6 +76,9 @@ const Home = () => {
 								</Card>
 							);
 						})}
+						{projectsData.length === 0 && (
+							<p className='no-data'>No projects</p>
+						)}
 					</div>
 				</section>
 			</Layout>

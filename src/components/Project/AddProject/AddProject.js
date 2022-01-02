@@ -15,16 +15,7 @@ import {
 } from '../../Utilities/general-form/FormComponents';
 
 const AddProject = (props) => {
-	const {
-		onModalCloseBtnClick,
-		setShowModalForm,
-		// projectName,
-		// setProjectName,
-		// projectDescription,
-		// setProjectDescription,
-		// projectAddress,
-		// setProjectAddress,
-	} = props;
+	const { onModalCloseBtnClick, setShowModalForm } = props;
 
 	const date = new Date();
 
