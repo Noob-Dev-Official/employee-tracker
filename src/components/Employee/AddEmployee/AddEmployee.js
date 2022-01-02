@@ -57,7 +57,7 @@ const AddEmployee = (props) => {
 		<>
 			<ModalContainer onModalCloseBtnClick={onModalCloseBtnClick}>
 				<ModalTitle>
-					<h2>Add Project</h2>
+					<h2>Add Employee</h2>
 				</ModalTitle>
 				<ModalBody>
 					<Form onSubmit={onFormSubmit}>
