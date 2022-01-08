@@ -19,6 +19,8 @@ import {
 const AddTimesheets = (props) => {
 	const { onModalCloseBtnClick, setShowModalForm } = props;
 
+	const date = new Date();
+
 	const dispatch = useDispatch();
 
 	const [timesheetName, setTimesheetName] = useState({ timesheetName: '' });
@@ -76,7 +78,6 @@ const AddTimesheets = (props) => {
 								onChange={(date) => setDateFrom(date)}
 								dateFormat='dd/MM/yyyy'
 								className='date-picker'
-								monthsShown={2}
 							/>
 						</FormInputDiv>
 						<FormInputDiv>

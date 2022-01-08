@@ -9,6 +9,12 @@ export const Form = styled.form`
 export const FormInputDiv = styled.div`
 	display: flex;
 	flex-direction: column;
+
+	.date-picker {
+		padding: 8px 10px;
+		width: 100%;
+		margin-top: 5px;
+	}
 `;
 
 export const FormLabel = styled.label``;

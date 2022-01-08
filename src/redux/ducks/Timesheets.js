@@ -15,6 +15,8 @@ const initialState = {
 	timesheets: [],
 };
 
+// const GET_TIMESHEETS = 'GET_TIMESHEETS'
+
 /* increment timesheets count */
 const ADD_TIMESHEETS = 'ADD_TIMESHEETS';
 
