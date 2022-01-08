@@ -1,17 +1,32 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
 import Layout from '../../components/Utilities/Layout';
 import SubTitle from '../../components/Utilities/SubTitle';
 import { GeneralButton } from '../../components/Utilities/ExportedStylings';
 import Card from '../../components/Utilities/Card';
+import AddTimesheets from '../../components/Timesheets/AddTimesheets/AddTimesheets';
 
 import './Timesheets.scss';
 
 const Timesheets = () => {
 	const timesheetsData = useSelector((state) => state.timesheets.timesheets);
+
+	const [showModalForm, setShowModalForm] = useState(false);
+
+	const { projectID } = useParams();
+
+	const onAddTimesheetBtnClick = () => {
+		setShowModalForm((prev) => !prev);
+	};
+
+	const onTimesheetFormCloseBtnClick = () => {
+		setShowModalForm((prev) => !prev);
+	};
+
+	console.log(projectID);
 
 	return (
 		<>
@@ -27,7 +42,11 @@ const Timesheets = () => {
 					>
 						Edit Project
 					</GeneralButton>
-					<GeneralButton marginLeft='20px' marginTop='10px'>
+					<GeneralButton
+						marginLeft='20px'
+						marginTop='10px'
+						onClick={onAddTimesheetBtnClick}
+					>
 						Add Timesheet
 					</GeneralButton>
 					<GeneralButton
@@ -40,6 +59,12 @@ const Timesheets = () => {
 						End Project
 					</GeneralButton>
 				</div>
+				{showModalForm && (
+					<AddTimesheets
+						onModalCloseBtnClick={onTimesheetFormCloseBtnClick}
+						setShowModalForm={setShowModalForm}
+					/>
+				)}
 				<div className='timesheets-section'>
 					<SubTitle>Timesheets</SubTitle>
 					<div className='timesheets'>
