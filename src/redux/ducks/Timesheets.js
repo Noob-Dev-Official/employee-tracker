@@ -8,8 +8,7 @@ const initialState = {
 			id: 0,
 			name: '',
 			project_id: '',
-			date_from: '',
-			date_to: '',
+			date_created: '',
 		},
 	],
 	timesheets: [],
@@ -21,19 +20,18 @@ const initialState = {
 const ADD_TIMESHEETS = 'ADD_TIMESHEETS';
 
 /* actions */
-export const addTimesheets = (name, date_from, date_to) => ({
+export const addTimesheets = (name, dateCreated) => ({
 	type: ADD_TIMESHEETS,
 	id: uuidV4(),
-	date_from,
-	date_to,
 	name,
+	dateCreated,
 });
 
 /* reducer */
 const timesheetsReducer = (state = initialState, action) => {
 	switch (action.type) {
 		case ADD_TIMESHEETS: {
-			const { name, date_from, date_to, id } = action;
+			const { name, id, dateCreated } = action;
 
 			return {
 				...state,
@@ -42,8 +40,7 @@ const timesheetsReducer = (state = initialState, action) => {
 					{
 						id: id,
 						name: name,
-						date_from: date_from,
-						date_to: date_to,
+						date_created: dateCreated,
 					},
 				],
 			};

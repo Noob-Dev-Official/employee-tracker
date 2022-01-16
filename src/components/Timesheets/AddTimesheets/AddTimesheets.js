@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 
 import { useDispatch } from 'react-redux';
-import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 
 import { addTimesheets } from '../../../redux/ducks/Timesheets';
@@ -19,13 +18,11 @@ import {
 const AddTimesheets = (props) => {
 	const { onModalCloseBtnClick, setShowModalForm } = props;
 
-	const date = new Date();
-
 	const dispatch = useDispatch();
 
+	const date = new Date();
+
 	const [timesheetName, setTimesheetName] = useState({ timesheetName: '' });
-	const [dateFrom, setDateFrom] = useState(new Date());
-	const [dateTo, setDateTo] = useState(new Date());
 
 	const onTimesheetNameChange = (e) => {
 		setTimesheetName(() => {
@@ -38,21 +35,12 @@ const AddTimesheets = (props) => {
 	const onFormSubmit = (e) => {
 		e.preventDefault();
 
-		// dispatch(
-		// 	addTimesheets(
-		// 		timesheetName.timesheetName,
-		// 		0,
-		// 		projectAddress.projectAddress,
-		// 		projectDescription.projectDescription,
-		// 		false,
-		// 		date.getDate(),
-		// 	),
-		// );
+		dispatch(
+			addTimesheets(timesheetName.timesheetName, date.toLocaleDateString()),
+		);
 
 		setShowModalForm((prev) => !prev);
 	};
-
-	console.log(dateTo);
 
 	return (
 		<>
@@ -69,24 +57,6 @@ const AddTimesheets = (props) => {
 								name='timesheetName'
 								value={timesheetName.timesheetName}
 								onChange={onTimesheetNameChange}
-							/>
-						</FormInputDiv>
-						<FormInputDiv>
-							<FormLabel>Date From</FormLabel>
-							<DatePicker
-								selected={dateFrom}
-								onChange={(date) => setDateFrom(date)}
-								dateFormat='dd/MM/yyyy'
-								className='date-picker'
-							/>
-						</FormInputDiv>
-						<FormInputDiv>
-							<FormLabel>Date To</FormLabel>
-							<DatePicker
-								selected={dateTo}
-								onChange={(date) => setDateTo(date)}
-								dateFormat='dd/MM/yyyy'
-								className='date-picker'
 							/>
 						</FormInputDiv>
 
