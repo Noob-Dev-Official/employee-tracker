@@ -63,7 +63,7 @@ const AddProject = (props) => {
 				projectAddress.projectAddress,
 				projectDescription.projectDescription,
 				false,
-				date.getDate(),
+				date.toLocaleDateString(),
 			),
 		);
 
